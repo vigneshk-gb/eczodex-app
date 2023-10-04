@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import EczodexLogo from "../../../public/main-logo.svg";
 import homeIcon from "../../../public/Icons/home-icon.svg";
@@ -9,7 +10,6 @@ import pieChartIcon from "../../../public/Icons/pie-chart.svg";
 import rightArrowIcon from "../../../public/Icons/right-arrow.svg";
 import signOutIcon from "../../../public/Icons/sign-out-icon.svg";
 import ethIcon from "../../../public/Icons/eth-icon.svg";
-
 
 const styles = {
   sidebar: `w-[22.43rem] h-screen rounded-r-[1rem] bg-[url('../../public/Images/SidebarBg.png')] bg-cover flex flex-col fixed`,
@@ -35,7 +35,9 @@ const styles = {
 const Sidebar = () => {
   return (
     <div className={styles.sidebar}>
-      <Image className={styles.logo} src={EczodexLogo} alt="eczodex-logo" />
+      <Link href="/" className={styles.logo}>
+        <Image src={EczodexLogo} alt="eczodex-logo" />
+      </Link>
       <div className={styles.navContainer}>
         <div className={styles.navItem}>
           <div className={styles.navIcon}>
@@ -73,14 +75,16 @@ const Sidebar = () => {
       </div>
       <div className={styles.walletContainer}>
         <div className={styles.walletIcon}>
-        <Image src={ethIcon} alt="eth-icon" />
+          <Image src={ethIcon} alt="eth-icon" />
         </div>
         <div className={styles.signOutContainer}>
-          <div className={styles.signOutText}>
-            Log Out
-          </div>
+          <div className={styles.signOutText}>Log Out</div>
           <div className={signOutIcon}>
-          <Image src={signOutIcon} alt="signout-icon" className={styles.signOutIcon}/>
+            <Image
+              src={signOutIcon}
+              alt="signout-icon"
+              className={styles.signOutIcon}
+            />
           </div>
         </div>
       </div>
