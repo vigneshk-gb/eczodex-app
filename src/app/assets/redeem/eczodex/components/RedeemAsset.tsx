@@ -36,7 +36,7 @@ const styles = {
 };
 
 const RedeemAsset = () => {
-  const [activeTab, setActiveTab] = useState<string>("two");
+  const [activeTab, setActiveTab] = useState<string>("one");
 
   return (
     <div className={styles.mint}>
@@ -89,6 +89,11 @@ const RedeemAsset = () => {
         {activeTab === "three" && <ChooseBank />}
         {activeTab === "four" && <ConfirmTransfer />}
       </div>
+      {activeTab === "one" && (
+        <div onClick={() => setActiveTab("two")} className={styles.primaryBtn}>
+          Next
+        </div>
+      )}
       {activeTab === "two" && (
         <div onClick={() => setActiveTab("three")} className={styles.primaryBtn}>
           Redeem
@@ -101,7 +106,7 @@ const RedeemAsset = () => {
       )}
       {activeTab === "four" && (
         <div onClick={() => setActiveTab("five")} className={styles.primaryBtn}>
-          Redeem
+          Next
         </div>
       )}
     </div>
