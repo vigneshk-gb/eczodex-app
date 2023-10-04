@@ -48,7 +48,7 @@ const RedeemAsset = () => {
         )}
         <div className={styles.titleContainer}>
           <div className={styles.subTitle}>Eczodex Stablecoin</div>
-          <div className={styles.title}>Mint Eczodex Stablecoin</div>
+          <div className={styles.title}>Redeem Eczodex Stablecoin</div>
         </div>
       </div>
       <div className={styles.mintBox}>
