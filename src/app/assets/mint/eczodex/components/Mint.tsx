@@ -59,7 +59,6 @@ const Mint = () => {
               className={
                 activeTab === "one" ? styles.activeMenuItem : styles.menuItem
               }
-              onClick={() => setActiveTab("one")}
             >
               Step 1
             </div>
@@ -67,7 +66,6 @@ const Mint = () => {
               className={
                 activeTab === "two" ? styles.activeMenuItem : styles.menuItem
               }
-              onClick={() => setActiveTab("two")}
             >
               Step 2
             </div>
@@ -75,7 +73,6 @@ const Mint = () => {
               className={
                 activeTab === "three" ? styles.activeMenuItem : styles.menuItem
               }
-              onClick={() => setActiveTab("three")}
             >
               Step 3
             </div>
@@ -83,7 +80,6 @@ const Mint = () => {
               className={
                 activeTab === "four" ? styles.activeMenuItem : styles.menuItem
               }
-              onClick={() => setActiveTab("four")}
             >
               Step 4
             </div>
@@ -91,7 +87,6 @@ const Mint = () => {
               className={
                 activeTab === "five" ? styles.activemenuItemL : styles.menuItem
               }
-              onClick={() => setActiveTab("five")}
             >
               Step 5
             </div>

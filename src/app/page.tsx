@@ -1,5 +1,5 @@
 
-import Hero from '@/components/hero/Hero'
+import HeroHome from '@/components/hero/HeroHome'
 import Sidebar from '@/components/sidebar/Sidebar'
 import Image from 'next/image'
 
@@ -16,7 +16,7 @@ export default function Home() {
     <div className={styles.dummyContainer}>
     </div>
     <Sidebar/>
-    <Hero/>
+    <HeroHome/>
    </div>
   )
 }

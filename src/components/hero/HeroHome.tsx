@@ -37,7 +37,7 @@ const styles = {
   dummyText: `text-center font-semibold text-[2rem] opacity-10`
 };
 
-const Hero = () => {
+const HeroHome = () => {
   return (
     <div className={styles.dashboard}>
       <Image className={styles.elipseSm} src={elipseSmall} alt="elipse" />
@@ -101,4 +101,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default HeroHome;

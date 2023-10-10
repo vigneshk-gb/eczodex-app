@@ -1,6 +1,7 @@
 import React from 'react'
 import Sidebar from "@/components/sidebar/Sidebar";
 import RedeemAsset from './components/RedeemAsset';
+import OpenDebtPositions from './components/OpenDebtPositions';
 
 
 
@@ -16,7 +17,8 @@ const Redeem  = () => {
     <div className={styles.assetWrapper}>
     <div className={styles.dummyContainer}></div>
     <Sidebar /> 
-    <RedeemAsset />
+    {/* <RedeemAsset /> */}
+    <OpenDebtPositions/>
   </div>
   )
 }

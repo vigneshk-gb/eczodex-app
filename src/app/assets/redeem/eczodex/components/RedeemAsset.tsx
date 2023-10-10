@@ -36,7 +36,7 @@ const styles = {
 };
 
 const RedeemAsset = () => {
-  const [activeTab, setActiveTab] = useState<string>("one");
+  const [activeTab, setActiveTab] = useState<string>("two");
 
   return (
     <div className={styles.mint}>
@@ -84,7 +84,6 @@ const RedeemAsset = () => {
             </div>
           </div>
         )}
-        {activeTab === "one" && <SelectWallets />}
         {activeTab === "two" && <AdjustDebt />}
         {activeTab === "three" && <ChooseBank />}
         {activeTab === "four" && <ConfirmTransfer />}

@@ -5,7 +5,7 @@ import radioIcon from "../../../../../../public/Icons/radio-icon.svg";
 import { AiFillInfoCircle } from "react-icons/ai";
 
 const styles = {
-    subHead: `w-100 h-auto mx-[2.81rem] mt-[2.5rem] mb-[1.5rem] flex items-center justify-center`,
+    subHead: `w-[100%] h-auto px-[2.81rem] mt-[2.5rem] mb-[1.5rem] flex items-center justify-center`,
     hr: `w-full h-[1px] border-[#E4E3EB]`,
     subHeadText: `w-[33.25rem] h-[1.56rem] text-base font-medium text-[#6E7187] text-center`,
     beneficiaryContainer: `w-[30rem] h-auto mx-auto flex justify-evenly items-center`,

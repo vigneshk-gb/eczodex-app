@@ -4,7 +4,7 @@ import Image from "next/image";
 import checkboxLogo from "../../../../../../public/Icons/file-checkbox.svg";
 
 const styles = {
-    transferContainer: `w-[51.56rem] h-fit mt-[2rem] mx-auto px-[2.81rem] py-[5rem] rounded-[1rem] border-[#E4E3EB] border-[1px] border-solid overflow-hidden flex flex-col items-center gap-[1rem]`,
+    transferContainer: `w-[51.56rem] h-fit mt-[2rem] mx-auto px-[2.81rem] py-[5rem]  overflow-hidden flex flex-col items-center gap-[1rem]`,
     checkboxLogo: `w-[3.81rem] h-[3.81rem]`,
     title: `font-semibold tracking-[0.0375rem] font-[1.5rem] text-center`,
     infoText: `font-normal tracking-[0.0375rem] font-[1.125rem] text-center`,
