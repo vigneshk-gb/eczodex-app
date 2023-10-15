@@ -16,7 +16,7 @@ const Redeem  = () => {
   return (
     <div className={styles.assetWrapper}>
     <div className={styles.dummyContainer}></div>
-    <Sidebar /> 
+    {/* <Sidebar />  */}
     {/* <RedeemAsset /> */}
     <OpenDebtPositions/>
   </div>

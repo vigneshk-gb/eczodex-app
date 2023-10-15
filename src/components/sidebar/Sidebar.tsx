@@ -12,7 +12,7 @@ import signOutIcon from "../../../public/Icons/sign-out-icon.svg";
 import ethIcon from "../../../public/Icons/eth-icon.svg";
 
 const styles = {
-  sidebar: `w-[22.43rem] h-screen rounded-r-[1rem] bg-[url('../../public/Images/SidebarBg.png')] bg-cover flex flex-col fixed`,
+  sidebar: `w-[22.43rem] h-screen rounded-r-[1rem] bg-[url('../../public/Images/SidebarBg.png')] bg-cover bg-center flex flex-col fixed`,
   logo: `w-[9.37rem] h-[2.38rem] mt-[4rem] mx-auto`,
   navContainer: `w-full h-fit mt-[6.82rem] flex flex-col gap-[2.19rem]`,
   navItem: `flex`,

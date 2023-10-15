@@ -1,0 +1,18 @@
+<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="tesla-svgrepo-com 1" clip-path="url(#clip0_1802_5154)">
+<path id="Vector" d="M12.8525 5.74425L15.5049 2.50221C15.5049 2.50221 20.0482 2.59861 24.5755 4.7032C23.4164 6.45595 21.1158 7.31385 21.1158 7.31385C20.9608 5.77397 19.882 5.39803 16.4511 5.39803L12.8533 25.7057L9.23048 5.39402C5.82457 5.39402 4.74577 5.77075 4.59074 7.30984C4.59074 7.30984 2.28934 6.46077 1.13102 4.70721C5.65749 2.60262 10.2016 2.50623 10.2016 2.50623L12.8541 5.74425H12.85H12.8525ZM12.8525 1.5688C16.509 1.53507 20.6973 2.13351 24.9852 4.00756C25.5587 2.96972 25.7049 2.51426 25.7049 2.51426C21.0194 0.656279 16.6303 0.0168689 12.8525 0C9.07464 0.0168689 4.68552 0.653066 0 2.51426C0 2.51426 0.208852 3.07897 0.719738 4.01238C5.00844 2.12949 9.19593 1.53587 12.8525 1.56479V1.5688Z" fill="url(#paint0_radial_1802_5154)"/>
+</g>
+<defs>
+<radialGradient id="paint0_radial_1802_5154" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="rotate(63.4357) scale(28.7397 35.0266)">
+<stop stop-color="#449ECF"/>
+<stop offset="0.252598" stop-color="#449ECF"/>
+<stop offset="0.545703" stop-color="#68BCC7"/>
+<stop offset="0.780808" stop-color="#76C9BC"/>
+<stop offset="0.859126" stop-color="#7BD2AA"/>
+<stop offset="1" stop-color="#7BD2AA"/>
+</radialGradient>
+<clipPath id="clip0_1802_5154">
+<rect width="25.7049" height="25.7049" fill="white"/>
+</clipPath>
+</defs>
+</svg>

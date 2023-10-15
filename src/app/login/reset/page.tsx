@@ -20,7 +20,7 @@ const Reset  = () => {
       {/* <AuthenticatorForm/> */}
       {/* <VerifyForm/> */}
       {/* <ConfirmReset/> */}
-      <SetNewPassword/>
+      {/* <SetNewPassword/> */}
       <HeroLoginSignup/>
   </div>
   )
