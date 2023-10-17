@@ -5,8 +5,8 @@ import eczodexLogo from "../../../../../../public/Images/VectorSecondary.svg";
 import OpenDebtTable from "./OpenDebtTable";
 
 const styles = {
-  openDebt: `w-[73rem] min-h-[56rem] h-fit bg-[#ffff] self-center mx-auto overflow-hidden flex flex-col justify-between`,
-  dashContainer: `w-full h-[15rem] p-[2.5rem] bg-[url('../../public/Images/Rectangle1.png')] bg-cover  rounded-[1rem] `,
+  openDebt: `w-[73rem] min-h-[56rem] h-fit bg-[#ffff] self-center mx-auto overflow-hidden flex flex-col gap-[1rem] justify-between`,
+  dashContainer: `w-full h-[14rem] p-[1.5rem] bg-[url('../../public/Images/Rectangle1.png')] bg-cover  rounded-[1rem] `,
   topCtn: `flex flex-col text-[#ffff]`,
   title: `text-[1.5rem] font-semibold mb-[1rem]`,
   dateCtn: `flex gap-[0.62rem]`,
@@ -17,11 +17,11 @@ const styles = {
   dashChartTxt: `text-[0.62rem] font-normal leading-[0.62rem] `,
   dashChartTxtSec: `text-[1.25rem] font-semibold leading-[1.25rem]`,
   dashInfoContainer: ` h-[8.3rem] p-[2.5rem] flex flex-col gap-[1.25rem ]`,
-  infoText: `text-[1rem] font-semibold `,
+  infoText: `text-[0.9rem] font-medium `,
   logoContainer: `flex gap-[0.62rem]`,
   logoIcon: `flex`,
-  logoText: `text-[2rem] font-semibold`,
-  infoTextSec: `text-[2rem] font-semibold flex`,
+  logoText: `text-[2rem] font-medium uppercase`,
+  infoTextSec: `text-[1.8rem] font-semibold flex`,
   dollarSign: `text-[1.1rem] font-semibold mt-2 mr-1`,
   stroke: `h-[4.18rem] border-r-[2px]  self-center`,
 };

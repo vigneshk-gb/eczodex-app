@@ -20,6 +20,10 @@ const styles = {
   addWalletTxt: `text-base font-medium tracking-[0.025rem] bg-clip-text text-transparent bg-gradient-to-b from-[#449ECF] to-[#68BCC7] to-[#76C9BC] to-[#7BD2AA]`,
   inputBox: `w-full outline-none font-medium text-[1.5rem] text-clip`,
   assetName: `text-[#2B8AC8] text-[1.3rem] font-medium`,
+  inputSelectWrapper: `w-full px-[0.8rem] py-[1em] border-[#E4E3EB] border-[1px] mb-[1.25rem] border-solid rounded-[0.5rem] flex justify-between items-center gap-[0.62rem]`,
+  inputSelectBox: `w-full outline-none font-medium text-[1.4rem] text-clip text-[#C3C3CA]`,
+  inputFirstOption: `font-medium text-[1.4rem]`,
+  inputOption: `font-medium text-[1.4rem] text-black`,
   termsContainer: `flex gap-[0.89rem] mt-auto ml-[0.4rem] mt-[0.94rem]`,
   termsText: `text-[1rem] font-normal text-[#110E2E] tracking-[0.025rem]`,
   checkboxInput:  `appearance-none w-5 h-5 border rounded-sm focus:outline-none 
@@ -70,7 +74,25 @@ const AdjustDebt = () => {
         </div>
         <div className={styles.inputContainer}>
           <div className={styles.inputTitleWrapper}>
-            <div className={styles.inputTitle}>Amount to Repay</div>
+            <div className={styles.inputTitle}>Select Wallet</div>
+          </div>
+          <div className={styles.inputSelectWrapper}>
+            <select className={styles.inputSelectBox}>
+              <option value="option1" className={styles.inputFirstOption}>
+                Lorem Ipsum
+              </option>
+              <option value="option2" className={styles.inputOption}>
+                Option 2
+              </option>
+              <option value="option3" className={styles.inputOption}>
+                Option 3
+              </option>
+            </select>
+          </div>
+        </div>
+        <div className={styles.inputContainer}>
+          <div className={styles.inputTitleWrapper}>
+            <div className={styles.inputTitle}>Amount to Redeem</div>
           </div>
           <div className={styles.inputWrapper}>
             <input type="number" className={styles.inputBox} />

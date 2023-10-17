@@ -1,0 +1,30 @@
+<svg width="26" height="31" viewBox="0 0 26 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 11322">
+<g id="Group">
+<g id="Group_2">
+<g id="Group 11022">
+<path id="Vector" d="M5.0214 16.9991C5.05396 16.9971 12.414 21.3588 12.5104 21.3961C12.5321 21.3835 19.9569 16.9892 19.9922 16.9937C19.9742 17.02 12.5154 27.5512 12.5104 27.5512C12.5054 27.5512 5.0214 16.9991 5.0214 16.9991Z" fill="url(#paint0_radial_1802_5156)"/>
+<path id="Vector_2" d="M12.5076 3.07007L19.9688 15.5486L12.5076 19.9681L5.04651 15.5486L12.5076 3.07007Z" fill="url(#paint1_radial_1802_5156)"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<radialGradient id="paint0_radial_1802_5156" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(19.9922 16.9937) rotate(125.337) scale(12.9419 18.6056)">
+<stop stop-color="#449ECF"/>
+<stop offset="0.252598" stop-color="#449ECF"/>
+<stop offset="0.545703" stop-color="#68BCC7"/>
+<stop offset="0.780808" stop-color="#76C9BC"/>
+<stop offset="0.859126" stop-color="#7BD2AA"/>
+<stop offset="1" stop-color="#7BD2AA"/>
+</radialGradient>
+<radialGradient id="paint1_radial_1802_5156" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(19.9688 3.07007) rotate(113.823) scale(18.4719 20.7966)">
+<stop stop-color="#449ECF"/>
+<stop offset="0.252598" stop-color="#449ECF"/>
+<stop offset="0.545703" stop-color="#68BCC7"/>
+<stop offset="0.780808" stop-color="#76C9BC"/>
+<stop offset="0.859126" stop-color="#7BD2AA"/>
+<stop offset="1" stop-color="#7BD2AA"/>
+</radialGradient>
+</defs>
+</svg>
