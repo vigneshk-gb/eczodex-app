@@ -15,11 +15,11 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Plus Jakarta Sans", sans-serif !important;
+  font-family: "Plus Jakarta Sans", sans-serif normal !important;
 }
 
   
 body{
 background-color: #F2F8FC;
-font-family: "Plus Jakarta Sans", sans-serif 
+font-family: "Plus Jakarta Sans", sans-serif normal
 }
