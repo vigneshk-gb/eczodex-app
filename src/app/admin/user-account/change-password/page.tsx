@@ -14,7 +14,7 @@ const ChangePasswordPage = () => {
     <div>
       <div className={styles.assetWrapper}>
         <div className={styles.dummyContainer}></div>
-        {/* <Sidebar /> */}
+        <Sidebar />
         <ChangePassword/>
       </div>
     </div>

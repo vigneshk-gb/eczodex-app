@@ -12,7 +12,7 @@ const Transactions = () => {
     <div>
       <div className={styles.assetWrapper}>
         <div className={styles.dummyContainer}></div>
-        {/* <Sidebar /> */}
+        <Sidebar />
         <TransactionStatus/>
       </div>
     </div>

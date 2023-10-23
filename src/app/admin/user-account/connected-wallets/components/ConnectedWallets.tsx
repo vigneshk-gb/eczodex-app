@@ -16,7 +16,7 @@ import listNavArrowRight from "../../../../../../public/Icons/nav-right.svg";
 import listNavArrowLeft from "../../../../../../public/Icons/nav-left.svg";
 
 const styles = {
-  listContainer: `w-full min-h-[40rem] h-fit bg-[#ffff] border-[#E4E3EB] rounded-[1rem] border-[1px] border-solid overflow-hidden pb-[2.69rem] my-[2.69rem]`,
+  listContainer: `w-[73rem] min-h-[40rem] h-fit bg-[#ffff] border-[#E4E3EB] rounded-[1rem] border-[1px] border-solid overflow-hidden pb-[2.69rem] my-[2.69rem] mx-auto`,
   listHeadContainer: `w-full px-[2.44rem] py-[2rem] flex items-center justify-between`,
   listMenu: `flex items-center gap-[0.5rem]`,
   menuItemAll: ` text-base font-semibold text-[#6E7187] px-[1.5rem] py-[0.3rem]`,
@@ -110,7 +110,7 @@ const ConnectedWallets = () => {
             <div className={styles.tableBodyContainer}>
               <div className={styles.tableBodyWalletAddress}>
                 <div className={styles.walletAddressTxt}>
-                  0x7845F69A37CB9E0E7FBDE10BF600E8D55B0B691E
+                  0x7845F69A37CB9E0E7FBDE10BF600E8
                 </div>
               </div>
               <div className={styles.tableBodyChain}>
