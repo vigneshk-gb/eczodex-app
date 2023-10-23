@@ -16,7 +16,7 @@ const styles = {
 const Reset  = () => {
   return (
     <div className={styles.assetWrapper}>
-      {/* <ResetForm/> */}
+      <ResetForm/>
       {/* <AuthenticatorForm/> */}
       {/* <VerifyForm/> */}
       {/* <ConfirmReset/> */}
