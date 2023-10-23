@@ -1,7 +1,7 @@
 import React from "react";
 import Sidebar from "@/components/sidebar/Sidebar";
-import ChangePassword from "./components/ChangePassword";
 
+import ChangePasswordForm from "./components/ChangePasswordForm";
 
 
 const styles = {
@@ -15,7 +15,7 @@ const ChangePasswordPage = () => {
       <div className={styles.assetWrapper}>
         <div className={styles.dummyContainer}></div>
         <Sidebar />
-        <ChangePassword/>
+        <ChangePasswordForm/>
       </div>
     </div>
   );
