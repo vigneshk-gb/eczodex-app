@@ -317,7 +317,7 @@ const Sidebar = () => {
           <Image src={ethIcon} alt="eth-icon" />
         </div>
         <div className={styles.signOutContainer}>
-          <div className={styles.signOutText}>Log Out</div>
+          <Link href="/login" className={styles.signOutText}>Log Out</Link>
           <div className={signOutIcon}>
             <Image
               src={signOutIcon}
