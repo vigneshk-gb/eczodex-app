@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
 import { HiMiniEye } from "react-icons/hi2";
 import { HiMiniEyeSlash } from "react-icons/hi2";
 
@@ -227,7 +228,7 @@ const RegisterForm = () => {
       <div className={styles.primaryBtn}>Create Account</div>
       <div className={styles.subMenuSec}>
         <div className={styles.subTextSec}>Already have an account?</div>
-        <div className={styles.subText}>Login</div>
+        <Link href="/login" className={styles.subText}>Login</Link>
       </div>
     </div>
   );

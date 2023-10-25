@@ -18,30 +18,31 @@ import ethIcon from "../../../public/Icons/eth-icon.svg";
 
 const styles = {
   sidebar: `w-[22.43rem] h-screen rounded-r-[1rem] bg-[url('../../public/Images/SidebarBg.png')] bg-cover bg-center flex flex-col fixed`,
-  logo: `w-[9.37rem] h-[2.38rem] mt-[4rem] mx-auto`,
-  navContainer: `w-full h-fit mt-[3.82rem] flex flex-col gap-[2.19rem]`,
-  navItem: `flex`,
+  logo: `mt-[3rem] mx-auto`,
+  navContainer: `w-full h-fit mt-[3rem] flex flex-col gap-y-[1.5rem]`,
+  navItem: `flex items-center `,
+  navActiveIndicator: `absolute w-[0.3rem] h-[4rem] rounded-r-[0.75rem] bg-[#fff]`,
   navIcon: `w-[3rem] h-[3rem] ml-[1.75rem] rounded-md bg-white flex justify-center items-center`,
   navIconSecondary: `w-[3rem] h-[3rem] ml-[1.75rem] rounded-md bg-white flex justify-center items-center bg-opacity-10`,
-  navText: `text-[#FFFFFF] ml-[1.38rem] self-center font-semibold text-sm`,
-  subNavContainer: `w-full h-fit flex flex-col mt-[2rem] gap-y-[0.5rem] `,
+  navText: `text-[#FFFFFF] ml-[1.38rem] self-center font-semibold text-base`,
+  subNavContainer: `w-full h-fit flex flex-col mt-[1.3rem] gap-y-[0.5rem] `,
   subNavIconContainer: `w-fit pt-[0.5rem] flex flex-col justify-center items-center gap-[0.5rem]`,
-  subNavTitle: `text-[#FFFFFF] text-[0.75rem] tracking-[0.11rem] font-normal uppercase mt-[2.19rem] ml-[2.25rem] mb-[0.1rem]`,
+  subNavTitle: `text-[#FFFFFF] text-[0.75rem] tracking-[0.11rem] font-normal uppercase mt-[2.19rem] ml-[2.25rem]`,
   subNavItem: `w-fit ml-[3rem] flex gap-[2.62rem] items-start`,
   subNavVerticalLine: `w-[1px] h-[2rem] bg-[#ffff]`,
   subNavItemMenuCircleActive: `w-[0.5rem] h-[0.5rem]  bg-[#fff] rounded-md`,
   subNavItemMenuCircle: `w-[0.5rem] h-[0.5rem] border border-[#fff] rounded-md`,
   subNavItemTxt: `text-base font-normal text-[#fff]`,
   subNavItemActiveTxt: `text-base font-semibold text-[#fff]`,
-  adminHeading: `text-[#FFFFFF] text-[0.75rem] tracking-[0.11rem] font-normal uppercase mt-auto ml-[2.25rem] mb-[1.31rem]`,
+  adminHeading: `text-[#FFFFFF] text-[0.75rem] tracking-[0.11rem] font-normal uppercase mt-auto ml-[2.25rem] mb-[1.3rem]`,
   adminContainer: `w-full h-fit flex flex-col gap-[2.19rem]`,
   adminItemWrapper: `flex flex-col`,
-  adminItem: `flex`,
+  adminItem: `flex items-center`,
   adminIcon: `w-[3rem] h-[3rem] ml-[2.06rem] rounded-md bg-white flex justify-center items-center`,
   adminIconSecondary: `w-[3rem] h-[3rem] ml-[2.06rem] rounded-md bg-white flex justify-center items-center bg-opacity-10`,
-  adminText: `text-[#FFFFFF] ml-[1.38rem] self-center font-semibold text-sm`,
+  adminText: `text-[#FFFFFF] ml-[1.38rem] self-center font-semibold text-base`,
   arrowIcon: `ml-auto mr-[2.43rem] w-[0.32rem] h-[0.75rem] self-center`,
-  walletContainer: `w-full h-[6.31rem] bg-[#2B8AC8] rounded-r-[1rem] mt-auto flex items-center`,
+  walletContainer: `w-full min- h-[5rem] mt-auto bg-[#2B8AC8] rounded-r-[1rem] flex items-center`,
   walletIcon: `w-[3.68rem] h-[3.68rem] ml-[1.31rem]`,
   signOutContainer: `flex gap-[0.75rem] ml-auto mr-[1.81rem] items-center`,
   signOutText: `text-sm font-semibold text-[#ffff]`,
@@ -74,10 +75,6 @@ const Sidebar = () => {
     }
   }, [pathname]);
 
-  useEffect(() => {
-    console.count(`${pathname}, 👀`);
-  }, [pathname]);
-
   return (
     <div className={styles.sidebar}>
       <Link href="/" className={styles.logo}>
@@ -85,6 +82,9 @@ const Sidebar = () => {
       </Link>
       <div className={styles.navContainer}>
         <div className={styles.navItem}>
+          {currentRoute === "home" && (
+            <div className={styles.navActiveIndicator}></div>
+          )}
           <div
             className={
               currentRoute === "home" ? styles.navIcon : styles.navIconSecondary
@@ -102,6 +102,9 @@ const Sidebar = () => {
           </Link>
         </div>
         <div className={styles.navItem}>
+          {currentRoute === "transactions" && (
+            <div className={styles.navActiveIndicator}></div>
+          )}
           <div
             className={
               currentRoute === "transactions"
@@ -218,6 +221,12 @@ const Sidebar = () => {
       <div className={styles.adminContainer}>
         <div className={styles.adminItemWrapper}>
           <div className={styles.adminItem}>
+            {currentRoute === "connected-wallets" ||
+            currentRoute === "change-password" ? (
+              <div className={styles.navActiveIndicator}></div>
+            ) : (
+              <></>
+            )}
             <div
               className={
                 currentRoute === "connected-wallets" ||
@@ -289,6 +298,7 @@ const Sidebar = () => {
           </div>
         </div>
         <div className={styles.adminItem}>
+          {currentRoute === "analytics" && (<div className={styles.navActiveIndicator}></div>)}
           <div
             className={
               currentRoute === "analytics"
@@ -317,7 +327,9 @@ const Sidebar = () => {
           <Image src={ethIcon} alt="eth-icon" />
         </div>
         <div className={styles.signOutContainer}>
-          <Link href="/login" className={styles.signOutText}>Log Out</Link>
+          <Link href="/login" className={styles.signOutText}>
+            Log Out
+          </Link>
           <div className={signOutIcon}>
             <Image
               src={signOutIcon}

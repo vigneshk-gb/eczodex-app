@@ -5,8 +5,8 @@ import Image from 'next/image'
 
 
 const styles = {
-  appWrapper: `w-[85%] h-screen mx-auto flex`,
-  dummyContainer: `w-[22.43rem] h-screen rounded-r-[1rem] appearence-none`,
+  appWrapper: `w-full h-screen flex`,
+  dummyContainer: `min-w-[22.43rem] h-screen rounded-r-[1rem] appearence-none`,
 }
 
 

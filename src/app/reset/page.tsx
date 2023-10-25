@@ -13,7 +13,7 @@ const styles = {
   assetWrapper: `w-full h-fit flex justify-center`,
 };
 
-const Reset  = () => {
+const ResetPage  = () => {
   return (
     <div className={styles.assetWrapper}>
       <ResetForm/>
@@ -26,4 +26,4 @@ const Reset  = () => {
   )
 }
 
-export default Reset 
+export default ResetPage 

@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const styles = {
   login: `w-full lg:w-1/2  h-screen bg-[#ffff] flex flex-col items-center justify-center px-[1rem] overflow-auto`,
@@ -31,12 +32,12 @@ const LoginForm = () => {
         />
       </div>
       <div className={styles.subMenu}>
-        <div className={styles.subText}>Forgot Password?</div>
+        <Link href="/reset" className={styles.subText}>Forgot Password?</Link>
       </div>
       <div className={styles.primaryBtn}>Login</div>
       <div className={styles.subMenuSec}>
         <div className={styles.subTextSec}>Don&rsquo;t have an account?</div>
-        <div className={styles.subText}>Sign Up</div>
+        <Link href="/register" className={styles.subText}>Sign Up</Link>
       </div>
     </div>
   );

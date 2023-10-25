@@ -3,7 +3,7 @@ import React from "react";
 import Mint from "./components/Mint";
 
 const styles = {
-  assetWrapper: `w-[85%] h-fit mx-auto flex`,
+  assetWrapper: `w-full h-screen flex`,
   dummyContainer: `w-[22.43rem] h-screen rounded-r-[1rem] appearence-none`,
 };
 
