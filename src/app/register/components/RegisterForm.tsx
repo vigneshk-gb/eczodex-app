@@ -6,17 +6,17 @@ import { HiMiniEyeSlash } from "react-icons/hi2";
 import { toast } from "react-toastify";
 
 const styles = {
-  register: `w-1/2  h-screen bg-[#ffff] flex flex-col items-center justify-center `,
-  registerContainer: `w-[28rem] flex flex-col justify-center`,
-  title: `text-center text-[2rem] font-semibold mb-[2.5rem]`,
-  inputNameWrapper: `flex gap-[1rem]`,
-  inputWrapper: `w-[28rem] px-[0.8rem] py-[1rem] border-[#E4E3EB] border-[1px] border-solid rounded-[0.5rem] flex justify-between items-center gap-[0.62rem] mb-[1rem]`,
-  passwordInputWrapper: `w-[28rem] px-[0.8rem] py-[1rem] border-[#E4E3EB] border-[1px] border-solid rounded-[0.5rem] flex justify-between items-center gap-[0.62rem]`,
+  register: `w-full lg:w-1/2 h-screen bg-[#ffff] flex flex-col items-center justify-center px-[1rem] overflow-auto`,
+  registerContainer: `w-full max-w-[28rem] flex flex-col justify-center`,
+  title: `text-center text-[1.5rem] md:text-[2.5rem] font-semibold mb-[2rem] md:mb-[2.5rem]`,
+  inputNameWrapper: `flex max-sm:flex-col gap-x-[1rem]`,
+  inputWrapper: `w-full max-w-[28rem] px-[0.8rem] py-[1rem] border-[#E4E3EB] border-[1px] border-solid rounded-[0.5rem] flex justify-between items-center gap-[0.62rem] mb-[1rem]`,
+  passwordInputWrapper: `w-full max-w-[28rem] px-[0.8rem] py-[1rem] border-[#E4E3EB] border-[1px] border-solid rounded-[0.5rem] flex justify-between items-center gap-[0.62rem]`,
   inputBox: `w-full outline-none font-medium text-base text-clip placeholder:font-normal placeholder:text-base placeholder:text-[#6E7187]`,
-  inputSelectWrapper: `w-full px-[0.8rem] py-[1.3rem] border-[#E4E3EB] border-[1px] mb-[1.25rem] border-solid rounded-[0.5rem] flex justify-between items-center gap-[0.62rem]`,
-  inputSelectBox: `w-full outline-none font-normal text-[1rem] text-clip text-[#6E7187]`,
-  inputFirstOption: `font-normal text-[1rem] text-[#6E7187]`,
-  inputOption: `font-normal text-[1rem] text-[#6E7187]`,
+  inputSelectWrapper: `relative w-full max-w-[28rem] pr-[0.8rem] border-[#E4E3EB] overflow-hidden border-[1px] mb-[1.25rem] border-solid rounded-[0.5rem]`,
+  inputSelectBox: `w-full py-[1.3rem] pl-[0.8rem] outline-none bg-transparent font-normal text-base text-[#1E1E1E] cursor-pointer`,
+  inputFirstOption: `font-normal text-base text-[#1E1E1E] hidden`,
+  inputOption: `font-normal text-base text-[#1E1E1E]`,
   passwordContainer: `flex flex-col gap-[0.1rem]`,
   indicatorContainer: `flex gap-[0.75rem] items-center`,
   indicatorBox: `flex gap-[0.12rem]`,
@@ -29,11 +29,11 @@ const styles = {
   indicatorTxtWeak: `text-[0.62rem] text-[#F17E7E] uppercase font-medium leading-[0.87rem]`,
   indicatorTxtModerate: `text-[0.62rem] text-[#D1CA7B] uppercase font-medium leading-[0.87rem]`,
   indicatorTxtStrong: `text-[0.62rem] text-[#7FD7A4] uppercase font-medium leading-[0.87rem]`,
-  subMenu: `w-[28rem] flex justify-end`,
-  subText: `text-[#5EBC8B] font-bold text-[1rem]`,
-  primaryBtn: `w-[28.37rem] py-[1.21rem] mx-auto my-[1rem] text-base font-semibold text-[#ffff] gap-[0.62rem] rounded-[0.37rem] bg-[url('../../public/Images/Rectangle1.png')] bg-cover  flex justify-center items-center`,
-  subMenuSec: `flex gap-[0.62rem]`,
-  subTextSec: `font-normal text-[1rem] text-[#6E7187]`,
+  subMenu: `w-full max-w-[28rem] flex justify-end`,
+  subText: `text-[#5EBC8B] font-bold text-[0.87rem] md:text-base`,
+  primaryBtn: `w-full max-w-[28rem] py-[1rem] md:py-[1.21rem] mx-auto my-[1rem] text-[0.87rem] md:text-base font-semibold text-[#ffff] gap-[0.62rem] rounded-[0.37rem] bg-[url('../../public/Images/Rectangle1.png')] bg-cover  flex justify-center items-center`,
+  subMenuSec: `w-full max-w-[28rem] flex gap-[0.62rem] justify-center`,
+  subTextSec: `font-normal text-[0.87rem] md:text-base text-[#6E7187]`
 };
 
 const RegisterForm = () => {
@@ -106,6 +106,14 @@ const RegisterForm = () => {
     }
   };
 
+  const [selectedOption, setSelectedOption] = useState('option1');
+
+  const handleOptionChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedOption(e.target.value);
+  };
+
+
+  
   return (
     <div className={styles.register}>
       <div className={styles.title}>Create Your Account</div>
@@ -146,16 +154,17 @@ const RegisterForm = () => {
         <div className={styles.inputSelectWrapper}>
           <select className={styles.inputSelectBox}>
             <option value="option1" className={styles.inputFirstOption}>
-              United States
+              Country
             </option>
             <option value="option2" className={styles.inputOption}>
-              Option 2
+            United States
             </option>
             <option value="option3" className={styles.inputOption}>
               Option 3
             </option>
           </select>
         </div>
+        
         <div className={styles.passwordContainer}>
           <div className={styles.passwordInputWrapper}>
             <input

@@ -1,12 +1,11 @@
 import React from 'react'
-import Sidebar from "@/components/sidebar/Sidebar";
 import LoginForm from './components/LoginForm';
 import HeroLoginSignup from '@/components/hero/HeroLoginSignup';
 
 
 
 const styles = {
-  assetWrapper: `w-[85%] h-fit mx-auto flex`,
+  assetWrapper: `w-full h-fit flex justify-center`,
 };
 
 const Login  = () => {
