@@ -4,7 +4,7 @@ import RegisterForm from "./components/RegisterForm";
 import HeroLoginSignup from "@/components/hero/HeroLoginSignup";
 
 const styles = {
-  assetWrapper: `w-[85%] h-fit mx-auto flex`,
+  assetWrapper: `w-full h-fit flex justify-center`,
 };
 
 const Login = () => {

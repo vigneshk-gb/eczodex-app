@@ -10,14 +10,14 @@ import SetNewPassword from './components/SetNewPassword';
 
 
 const styles = {
-  assetWrapper: `w-[85%] h-fit mx-auto flex`,
+  assetWrapper: `w-full h-fit flex justify-center`,
 };
 
 const Reset  = () => {
   return (
     <div className={styles.assetWrapper}>
-      <ResetForm/>
-      {/* <AuthenticatorForm/> */}
+      {/* <ResetForm/> */}
+      <AuthenticatorForm/>
       {/* <VerifyForm/> */}
       {/* <ConfirmReset/> */}
       {/* <SetNewPassword/> */}
