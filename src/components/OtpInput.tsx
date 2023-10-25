@@ -1,7 +1,6 @@
 import React, { useMemo } from "react";
 import { RE_DIGIT } from "../utils/constants";
 
-
 const styles = {
   reset: `w-full lg:w-1/2 h-screen bg-[#ffff] flex flex-col items-center justify-center px-[1rem] overflow-auto`,
   titleContainer: `flex flex-col gap-[0.4rem] mb-[2rem] md:mb-[2.5rem]`,
@@ -24,36 +23,102 @@ type Props = {
 
 const OtpInput = ({ value, valueLength, onChange }: Props) => {
   const valueItems = useMemo(() => {
-    const valueArray = value.split('');
+    const valueArray = value.split("");
     const items: Array<string> = [];
 
-    for(let i = 0; i<valueLength; i++) {
-        const char = valueArray[i];
-        const re = new RegExp(/^\d+$/);
+    for (let i = 0; i < valueLength; i++) {
+      const char = valueArray[i];
+      const re = new RegExp(/^\d+$/);
 
-        if(RE_DIGIT.test(char)){
-            items.push(char)
-        }else{
-            items.push('')
-        }
+      if (RE_DIGIT.test(char)) {
+        items.push(char);
+      } else {
+        items.push("");
+      }
     }
 
     return items;
   }, [value, valueLength]);
 
-  const inputOnChange = (e: React.ChangeEvent<HTMLInputElement>, index: number) => {
-    const target = e.target;
-    const targetValue = target.value;
+  const focusOnNextInput = (target: HTMLInputElement) => {
+    const nextElementSibling =
+      target.nextElementSibling as HTMLInputElement | null;
 
-    if(!RE_DIGIT.test(targetValue)){
-        return;
+    if (nextElementSibling) {
+      nextElementSibling.focus();
+    }
+  };
+
+  const focusOnPreviousInput = (target: HTMLInputElement) => {
+    const previousElementSibling =
+      target.previousElementSibling as HTMLInputElement | null;
+
+    if (previousElementSibling) {
+      previousElementSibling.focus();
+    }
+  };
+
+  const inputOnChange = (
+    e: React.ChangeEvent<HTMLInputElement>,
+    index: number
+  ) => {
+    const target = e.target;
+    let targetValue = target.value.trim();
+    const isTargetValueDigit = RE_DIGIT.test(targetValue);
+
+    if (!isTargetValueDigit && targetValue !== "") {
+      return;
     }
 
-    const newValue = value.substring(0, index) + targetValue + value.substring(index + 1)
-    onChange(newValue);
+    targetValue = isTargetValueDigit ? targetValue : " ";
 
-    // const nextElementSibling
-  }
+    const targetValueLength = targetValue.length;
+
+    if (targetValueLength === 1) {
+      const newValue =
+        value.substring(0, index) + targetValue + value.substring(index + 1);
+      onChange(newValue);
+
+      if (!isTargetValueDigit) {
+        return;
+      }
+
+      focusOnNextInput(target);
+    } else if (targetValueLength === valueLength) {
+      onChange(targetValue);
+      target.blur();
+    }
+  };
+
+  const inputKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    const { key } = e;
+    const target = e.target as HTMLInputElement;
+    const targetValue = target.value;
+
+    if (key === "ArrowRight" || key === "ArrowDown") {
+      e.preventDefault();
+      return focusOnNextInput(target);
+    }
+
+    if (key === "ArrowLeft" || key === "ArrowUp") {
+      e.preventDefault();
+      return focusOnPreviousInput(target);
+    }
+
+    target.setSelectionRange(0, targetValue.length);
+
+    if (key !== "Backspace" || targetValue !== "") {
+      return;
+    }
+
+    focusOnPreviousInput(target);
+  };
+
+  const inputOnFocus = (e: React.FocusEvent<HTMLInputElement>) => {
+    const { target } = e;
+
+    target.setSelectionRange(0, target.value.length);
+  };
 
   return (
     <div className={styles.inputContainer}>
@@ -64,10 +129,12 @@ const OtpInput = ({ value, valueLength, onChange }: Props) => {
           inputMode="numeric"
           autoComplete="one-time-code"
           pattern="\d{1}"
-          maxLength={6}
+          maxLength={valueLength}
           className={styles.inputBox}
           value={digit}
           onChange={(e) => inputOnChange(e, index)}
+          onKeyDown={inputKeyDown}
+          onFocus={inputOnFocus}
         />
       ))}
     </div>
