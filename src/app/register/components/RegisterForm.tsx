@@ -48,7 +48,6 @@ const RegisterForm = () => {
     let regexPositive = ["[A-Z]", "[a-z]", "[0-9]", "\\W"];
     regexPositive.forEach((regex, index) => {
       if (new RegExp(regex).test(password)) {
-        console.log(score, "score ✅");
         score += 1;
       }
     });
