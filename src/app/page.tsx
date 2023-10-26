@@ -1,12 +1,11 @@
-
 import HeroHome from '@/components/hero/HeroHome'
 import Sidebar from '@/components/sidebar/Sidebar'
 import Image from 'next/image'
 
 
 const styles = {
-  appWrapper: `w-full h-screen flex`,
-  dummyContainer: `min-w-[22.43rem] h-screen rounded-r-[1rem] appearence-none`,
+  appWrapper: `w-full h-fit flex`,
+  dummyContainer: `w-full max-w-[22.43rem] h-screen rounded-r-[1rem] appearence-none max-xl:hidden`,
 }
 
 

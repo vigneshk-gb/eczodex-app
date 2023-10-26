@@ -17,8 +17,8 @@ import signOutIcon from "../../../public/Icons/sign-out-icon.svg";
 import ethIcon from "../../../public/Icons/eth-icon.svg";
 
 const styles = {
-  sidebar: `w-[22.43rem] h-screen rounded-r-[1rem] bg-[url('../../public/Images/SidebarBg.png')] bg-cover bg-center flex flex-col fixed`,
-  logo: `mt-[3rem] mx-auto`,
+  sidebar: `w-full max-w-[22.43rem] h-screen rounded-r-[1rem] bg-[url('../../public/Images/SidebarBg.png')] bg-cover bg-center flex flex-col fixed max-xl:hidden`,
+  logo: `mt-[2rem] mx-auto`,
   navContainer: `w-full h-fit mt-[3rem] flex flex-col gap-y-[1.5rem]`,
   navItem: `flex items-center `,
   navActiveIndicator: `absolute w-[0.3rem] h-[4rem] rounded-r-[0.75rem] bg-[#fff]`,
