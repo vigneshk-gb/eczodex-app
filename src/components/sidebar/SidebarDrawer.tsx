@@ -15,11 +15,13 @@ import pieChartIconWhite from "../../../public/Icons/pie-chart-white.svg";
 import rightArrowIcon from "../../../public/Icons/right-arrow.svg";
 import signOutIcon from "../../../public/Icons/sign-out-icon.svg";
 import ethIcon from "../../../public/Icons/eth-icon.svg";
+import hamburgerIcon from "../../../public/Icons/hamburger.svg";
 
 const styles = {
-  sidebar: `w-full max-w-[22.43rem] h-screen rounded-r-[1rem] bg-[url('../../public/Images/SidebarBg.png')] bg-cover bg-center flex flex-col fixed max-xl:hidden`,
-  logo: `mt-[2rem] mx-auto`,
-  navWrapper: `w-full h-full flex flex-col justify-between py-[1rem]`,
+  header: `w-full h-[3.8rem] mt-[2rem] p-[1rem] flex items-center justify-between xl:hidden`,
+  sidebar: `w-full min-w-[22.43rem] h-screen md:rounded-r-[1rem] bg-[url('../../public/Images/SidebarBg.png')] bg-cover bg-center flex flex-col xl:hidden overflow-auto`,
+  logo: `mx-auto`,
+  navWrapper: `w-full h-full flex flex-col gap-[1rem] justify-between pb-[1rem]`,
   navItemWrapper: `flex flex-col`,
   navContainer: `w-full h-fit mt-[3rem] flex flex-col gap-y-[1.5rem]`,
   navItem: `flex items-center justify-between`,
@@ -42,14 +44,14 @@ const styles = {
   adminItemWrapper: `flex flex-col`,
   arrowIcon: `mr-[2.43rem] cursor-pointer`,
   arrowIconActive: `mr-[2.43rem] -rotate-90 cursor-pointer`,
-  walletContainer: `w-full min- h-[5rem] mt-auto bg-[#2B8AC8] rounded-r-[1rem] flex items-center`,
+  walletContainer: `w-full min- h-[5rem] mt-auto bg-[#2B8AC8] md:rounded-r-[1rem] flex items-center`,
   walletIcon: `w-[3.68rem] h-[3.68rem] ml-[1.31rem]`,
   signOutContainer: `flex gap-[0.75rem] ml-auto mr-[1.81rem] items-center`,
   signOutText: `text-sm font-semibold text-[#ffff]`,
   signOutIcon: `w-[1.5rem] h-[1.5rem]`,
 };
 
-const Sidebar = () => {
+const SidebarDrawer = () => {
   const pathname = usePathname();
   const [currentRoute, setCurrentRoute] = useState("/");
   const [isSubNavOpen, setIsSubNavOpen] = useState(false);
@@ -76,11 +78,23 @@ const Sidebar = () => {
     }
   }, [pathname]);
 
+  const toggleSubNav = () => {
+    setIsSubNavOpen(!isSubNavOpen);
+  };
+
   return (
     <div className={styles.sidebar}>
-      <Link href="/" className={styles.logo}>
-        <Image src={EczodexLogo} alt="eczodex-logo" />
-      </Link>
+      <div className={styles.header}>
+        {/* <div className={styles.navIcon}>
+          <Image src={hamburgerIcon} alt="hamburgerIcon" width={24} />
+        </div>
+        <Link href="/" className={styles.logo}>
+          <Image src={EczodexLogo} alt="eczodex-logo" />
+        </Link>
+        <Link href="/transaction" className={styles.navIcon}>
+          <Image src={syncIconWhite} alt="syncIconWhite" width={24} />
+        </Link> */}
+      </div>
       <div className={styles.navWrapper}>
         <div className={styles.navContainer}>
           <div className={styles.navItem}>
@@ -260,71 +274,62 @@ const Sidebar = () => {
                   </div>
                   <div className={styles.navText}>User Account</div>
                 </div>
-                {isSubNavOpen ? (
                 <div
-                  className={styles.arrowIconActive}
-                  onClick={() => setIsSubNavOpen(false)}
+                  className={
+                    isSubNavOpen ? styles.arrowIconActive : styles.arrowIcon
+                  }
+                  onClick={toggleSubNav}
                 >
                   <Image src={rightArrowIcon} alt="arrow-icon" width={7} />
                 </div>
-              ) : (
-                <div
-                  className={styles.arrowIcon}
-                  onClick={() => setIsSubNavOpen(true)}
-                >
-                  <Image src={rightArrowIcon} alt="arrow-icon" width={7} />
-                </div>
-              )}
               </div>
-              {
-                isSubNavOpen && (
-                  <div className={styles.subNavContainer}>
-                <div className={styles.subNavItem}>
-                  <div className={styles.subNavIconContainer}>
-                    <div
+              {isSubNavOpen && (
+                <div className={styles.subNavContainer}>
+                  <div className={styles.subNavItem}>
+                    <div className={styles.subNavIconContainer}>
+                      <div
+                        className={
+                          currentRoute === "connected-wallets"
+                            ? styles.subNavItemMenuCircleActive
+                            : styles.subNavItemMenuCircle
+                        }
+                      ></div>
+                      <div className={styles.subNavVerticalLine}></div>
+                    </div>
+                    <Link
+                      href="/admin/user-account/connected-wallets"
                       className={
                         currentRoute === "connected-wallets"
-                          ? styles.subNavItemMenuCircleActive
-                          : styles.subNavItemMenuCircle
+                          ? styles.subNavItemActiveTxt
+                          : styles.subNavItemTxt
                       }
-                    ></div>
-                    <div className={styles.subNavVerticalLine}></div>
+                    >
+                      Connected Wallets
+                    </Link>
                   </div>
-                  <Link
-                    href="/admin/user-account/connected-wallets"
-                    className={
-                      currentRoute === "connected-wallets"
-                        ? styles.subNavItemActiveTxt
-                        : styles.subNavItemTxt
-                    }
-                  >
-                    Connected Wallets
-                  </Link>
-                </div>
-                <div className={styles.subNavItem}>
-                  <div className={styles.subNavIconContainer}>
-                    <div
+                  <div className={styles.subNavItem}>
+                    <div className={styles.subNavIconContainer}>
+                      <div
+                        className={
+                          currentRoute === "change-password"
+                            ? styles.subNavItemMenuCircleActive
+                            : styles.subNavItemMenuCircle
+                        }
+                      ></div>
+                    </div>
+                    <Link
+                      href="/admin/user-account/change-password"
                       className={
                         currentRoute === "change-password"
-                          ? styles.subNavItemMenuCircleActive
-                          : styles.subNavItemMenuCircle
+                          ? styles.subNavItemActiveTxt
+                          : styles.subNavItemTxt
                       }
-                    ></div>
+                    >
+                      Change Password
+                    </Link>
                   </div>
-                  <Link
-                    href="/admin/user-account/change-password"
-                    className={
-                      currentRoute === "change-password"
-                        ? styles.subNavItemActiveTxt
-                        : styles.subNavItemTxt
-                    }
-                  >
-                    Change Password
-                  </Link>
                 </div>
-              </div>
-                )
-              }
+              )}
             </div>
             <div className={styles.navItem}>
               {currentRoute === "analytics" && (
@@ -353,8 +358,8 @@ const Sidebar = () => {
                 </Link>
               </div>
               <div className={styles.arrowIcon}>
-                  <Image src={rightArrowIcon} alt="arrow-icon" width={7} />
-                </div>
+                <Image src={rightArrowIcon} alt="arrow-icon" width={7} />
+              </div>
             </div>
           </div>
         </div>
@@ -380,4 +385,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default SidebarDrawer;
