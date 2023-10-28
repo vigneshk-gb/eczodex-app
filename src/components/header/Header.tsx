@@ -10,12 +10,12 @@ import Link from "next/link";
 import SidebarDrawer from "../sidebar/SidebarDrawer";
 
 const styles = {
-  header: `w-full h-[3.8rem] p-[1rem] flex items-center justify-between bg-[url('../../public/Images/LoginPageGradient.png')] bg-cover xl:hidden z-30 `,
+  header: `w-full h-[3.8rem] p-[1rem] flex items-center justify-between bg-[url('../../public/Images/LoginPageGradient.png')] bg-cover xl:hidden z-30 sticky top-0`,
   sideBarheader: `w-full h-[3.8rem] p-[1rem] flex items-center justify-between md:bg-[url('../../public/Images/LoginPageGradient.png')] bg-cover xl:hidden z-30 `,
   logo: `flex`,
   hamburger: `flex`,
   navIcon: `w-[3rem] h-[3rem] rounded-md flex justify-center items-center`,
-  navIconActive: `w-[3rem] h-[3rem] rounded-md bg-white flex justify-center items-center bg-opacity-10`,
+  navIconActive: `w-[3rem] h-[3rem] rounded-md bg-white flex justify-center items-center bg-opacity-20`,
   sidebarDrawer: `fixed z-20 max-md:w-full w-fit h-screen`,
 };
 

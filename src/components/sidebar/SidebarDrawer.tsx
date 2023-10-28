@@ -21,7 +21,7 @@ const styles = {
   header: `w-full h-[3.8rem] mt-[2rem] p-[1rem] flex items-center justify-between xl:hidden`,
   sidebar: `w-full min-w-[22.43rem] h-screen md:rounded-r-[1rem] bg-[url('../../public/Images/SidebarBg.png')] bg-cover bg-center flex flex-col xl:hidden overflow-auto`,
   logo: `mx-auto`,
-  navWrapper: `w-full h-full flex flex-col justify-between py-[1rem]`,
+  navWrapper: `w-full h-full flex flex-col gap-[1rem] justify-between pb-[1rem]`,
   navItemWrapper: `flex flex-col`,
   navContainer: `w-full h-fit mt-[3rem] flex flex-col gap-y-[1.5rem]`,
   navItem: `flex items-center justify-between`,
@@ -77,6 +77,10 @@ const SidebarDrawer = () => {
       setCurrentRoute("change-password");
     }
   }, [pathname]);
+
+  const toggleSubNav = () => {
+    setIsSubNavOpen(!isSubNavOpen);
+  };
 
   return (
     <div className={styles.sidebar}>
@@ -270,21 +274,14 @@ const SidebarDrawer = () => {
                   </div>
                   <div className={styles.navText}>User Account</div>
                 </div>
-                {isSubNavOpen ? (
-                  <div
-                    className={styles.arrowIconActive}
-                    onClick={() => setIsSubNavOpen(false)}
-                  >
-                    <Image src={rightArrowIcon} alt="arrow-icon" width={7} />
-                  </div>
-                ) : (
-                  <div
-                    className={styles.arrowIcon}
-                    onClick={() => setIsSubNavOpen(true)}
-                  >
-                    <Image src={rightArrowIcon} alt="arrow-icon" width={7} />
-                  </div>
-                )}
+                <div
+                  className={
+                    isSubNavOpen ? styles.arrowIconActive : styles.arrowIcon
+                  }
+                  onClick={toggleSubNav}
+                >
+                  <Image src={rightArrowIcon} alt="arrow-icon" width={7} />
+                </div>
               </div>
               {isSubNavOpen && (
                 <div className={styles.subNavContainer}>

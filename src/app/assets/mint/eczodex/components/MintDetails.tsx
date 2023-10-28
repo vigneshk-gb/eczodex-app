@@ -1,25 +1,26 @@
 import React from "react";
 
 const styles = {
-  subHead: `w-100 h-auto mx-[2.81rem] my-[2.5rem] flex items-center justify-center`,
-  hr: `w-full h-[1px] border-[#E4E3EB]`,
-  subHeadText: `w-[33.25rem] h-[1.56rem] text-base font-medium text-[#6E7187] text-center`,
-  detailsContainer: `w-[30rem] h-auto mx-auto`,
-  limitInfoBox: `flex gap-[0.25rem]`,
-  limitText: `font-normal text-base text-[#6E7187] tracking-[0.025rem]`,
-  limitAmount: `font-bold text-base text-[#2B8AC8] tracking-[0.025rem]`,
-  inputContainer: `flex flex-col mt-[1rem]`,
+  subHead: `w-full h-auto mx-[2.81rem] my-[1.5rem] md:my-[2.5rem] flex items-center justify-evenly px-[1rem] md:px-[2.5rem]`,
+  hr: `flex-1 h-[1px] border-[#E4E3EB]`,
+  subHeadText: `text-[0.85rem] md:text-[1.25rem] font-medium text-[#6E7187] text-center mx-[1rem] md:mx-[2rem]`,
+  detailsContainer: `w-full md:w-[35rem] h-auto mx-auto`,
+  limitInfoBox: `flex gap-[0.25rem] mb-[1.5rem] md:mb-[2.5rem]`,
+  limitText: `font-normal text-[0.85rem] md:text-base text-[#6E7187] tracking-[0.025rem]`,
+  limitAmount: `font-bold text-[0.85rem] md:text-base text-[#2B8AC8] tracking-[0.025rem]`,
+  inputContainer: `flex flex-col mb-[1.25rem]`,
   inputTitleWrapper: `flex items-center justify-between`,
-  inputTitle: `font-normal text-base text-[#110E2E] tracking-[0.025rem] mb-[0.94rem]`,
+  inputTitle: `font-normal text-[0.85rem] md:text-base text-[#110E2E] tracking-[0.025rem] mb-[0.94rem]`,
   inputWrapper: `w-full p-[0.8rem] border-[#E4E3EB] border-[1px] border-solid rounded-[0.5rem] flex justify-between items-center gap-[0.62rem]`,
   addWalletTxt: `text-base font-medium tracking-[0.025rem] bg-clip-text text-transparent bg-gradient-to-b from-[#449ECF] to-[#68BCC7] to-[#76C9BC] to-[#7BD2AA]`,
-  inputBox: `w-full outline-none font-medium text-[1.5rem] text-clip`,
-  assetName: `text-[#2B8AC8] text-[1.3rem] font-medium`,
-  inputSelectWrapper: `w-full px-[0.8rem] py-[1em] border-[#E4E3EB] border-[1px] mb-[1.25rem] border-solid rounded-[0.5rem] flex justify-between items-center gap-[0.62rem]`,
-  inputSelectBox: `w-full outline-none font-medium text-[1.4rem] text-clip text-[#C3C3CA]`,
-  inputFirstOption: `font-medium text-[1.4rem]`,
-  inputOption: `font-medium text-[1.4rem] text-black`,
-  infoBox: `w-full font-normal text-[1rem] tracking-[0.025rem] text-[#6E7187]  mt-[1.25rem]`,
+  inputBox: `w-full outline-none font-medium text-base md:text-[1.5rem] text-clip`,
+  assetName: `flex-1 text-[#2B8AC8] text-base md:text-[1.5rem] font-medium`,
+  amountSymbol: `flex-1 text-[#DBDBDF] text-base md:text-[1.5rem] font-medium`,
+  inputSelectWrapper: `w-full pr-[0.8rem] border-[#E4E3EB] overflow-hidden border-[1px] mb-[1.25rem] border-solid rounded-[0.5rem]`,
+  inputSelectBox: `w-full py-[1.3rem] pl-[0.8rem] outline-none bg-transparent font-normal text-base md:text-[1.5rem] text-[#1E1E1E] cursor-pointer`,
+  inputFirstOption: `font-normal text-base md:text-[1.5rem] text-[#DBDBDF] hidden`,
+  inputOption: `font-normal text-base md:text-[1.5rem] text-[#1E1E1E]`,
+  infoBox: `w-full font-normal text-[0.85rem] md:text-base tracking-[0.025rem] text-[#6E7187]  mt-[1.25rem]`,
 };
 
 const MintDetails = () => {
@@ -40,8 +41,9 @@ const MintDetails = () => {
             <div className={styles.inputTitle}>Amount</div>
           </div>
           <div className={styles.inputWrapper}>
+            <span className={styles.amountSymbol}>$</span>
             <input type="number" className={styles.inputBox} />
-            <div className={styles.assetName}>ECZ</div>
+            <span className={styles.assetName}>ECZ</span>
           </div>
         </div>
         <div className={styles.inputContainer}>
