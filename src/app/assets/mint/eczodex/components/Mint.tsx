@@ -37,7 +37,7 @@ const styles = {
   assetActiveName: `font-semibold text-base text-[#110E2E]`,
   assetName: `font-medium text-base text-[#110E2E]`,
   primaryBtn: `w-full max-w-[28rem] py-[1rem] md:py-[1.21rem] mx-auto my-[1rem] text-[0.87rem] md:text-base font-semibold text-[#ffff] gap-[0.62rem] rounded-[0.37rem] bg-[url('../../public/Images/Rectangle1.png')] bg-cover  flex justify-center items-center`,
-  exitBtn: `font-semibold text-[0.85rem] md:text-base text-[#2B8AC8] tracking-[0.025rem] text-center mt-[1.5rem]`,
+  exitBtn: `font-semibold text-[0.87rem] md:text-base text-[#2B8AC8] tracking-[0.025rem] text-center mt-[1.5rem]`,
 };
 
 const Mint = () => {
