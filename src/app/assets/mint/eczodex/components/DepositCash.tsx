@@ -15,14 +15,11 @@ import plusIcon from "../../../../../../public/Icons/plus.svg"
 const styles = {
   subHead: `w-full h-auto mx-[2.81rem] my-[1.5rem] md:my-[2.5rem] flex items-center justify-evenly px-[1rem] md:px-[2.5rem]`,
   hr: `flex-1 h-[1px] border-[#E4E3EB]`,
-  subHeadText: `text-[0.85rem] md:text-[1.25rem] font-medium text-[#6E7187] text-center mx-[1rem] md:mx-[2rem]`,
-  detailsContainer: `w-full md:w-[35rem] h-auto mx-auto`,
-  limitInfoBox: `flex gap-[0.25rem]`,
-  limitText: `font-normal text-base text-[#6E7187] tracking-[0.025rem]`,
-  limitAmount: `font-bold text-base text-[#2B8AC8] tracking-[0.025rem]`,
+  subHeadText: `text-[0.87rem] md:text-[1.25rem] font-medium text-[#6E7187] text-center mx-[1rem] md:mx-[2rem]`,
+  depositContainer: `w-full md:w-[35rem] h-auto mx-auto px-[0.5rem] md:px-[1rem]`,
   inputContainer: `flex flex-col mt-[0.8rem]`,
   inputTitleWrapper: `flex items-center justify-between`,
-  inputTitle: `font-normal text-[0.85rem] md:text-base text-[#110E2E] tracking-[0.025rem] mb-[0.94rem]`,
+  inputTitle: `font-normal text-[0.87rem] md:text-base text-[#110E2E] tracking-[0.025rem] mb-[0.94rem]`,
   assetName: `text-[#2B8AC8] text-[1.3rem] font-medium`,
   inputSelectWrapper: `w-full pr-[0.8rem] border-[#E4E3EB] overflow-hidden border-[1px] mb-[1.25rem] border-solid rounded-[0.5rem]`,
   inputSelectBox: `w-full py-[1.3rem] pl-[0.8rem] outline-none bg-transparent font-normal text-base md:text-[1.5rem] text-[#1E1E1E] cursor-pointer`,
@@ -51,7 +48,7 @@ const DepositCash = () => {
         <div className={styles.subHeadText}>Deposit Cash</div>
         <hr className={styles.hr} />
       </div>
-      <div className={styles.detailsContainer}>
+      <div className={styles.depositContainer}>
         <div className={styles.inputContainer}>
           <div className={styles.inputTitleWrapper}>
             <div className={styles.inputTitle}>Transfer Method</div>
@@ -77,7 +74,7 @@ const DepositCash = () => {
           <div className={styles.transferFromBox}>
             <div className={selectedBank === 'jp-morgan' ? styles.transferFromItemActive :styles.transferFromItem} onClick={() => setSelectedBank('jp-morgan')}>
               <div>
-                <Image src={jpMorganIcon} alt="icon"/>
+                <Image src={jpMorganIcon} alt="icon" />
               </div>
               <div className={styles.itemBio}>
                 <div className={styles.itemTitle}>

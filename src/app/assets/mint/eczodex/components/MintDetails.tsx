@@ -3,14 +3,14 @@ import React from "react";
 const styles = {
   subHead: `w-full h-auto mx-[2.81rem] my-[1.5rem] md:my-[2.5rem] flex items-center justify-evenly px-[1rem] md:px-[2.5rem]`,
   hr: `flex-1 h-[1px] border-[#E4E3EB]`,
-  subHeadText: `text-[0.85rem] md:text-[1.25rem] font-medium text-[#6E7187] text-center mx-[1rem] md:mx-[2rem]`,
-  detailsContainer: `w-full md:w-[35rem] h-auto mx-auto`,
+  subHeadText: `text-[0.87rem] md:text-[1.25rem] font-medium text-[#6E7187] text-center mx-[1rem] md:mx-[2rem]`,
+  detailsContainer: `w-full md:w-[35rem] h-auto mx-auto px-[0.5rem] md:px-[1rem]`,
   limitInfoBox: `flex gap-[0.25rem] mb-[1.5rem] md:mb-[2.5rem]`,
-  limitText: `font-normal text-[0.85rem] md:text-base text-[#6E7187] tracking-[0.025rem]`,
-  limitAmount: `font-bold text-[0.85rem] md:text-base text-[#2B8AC8] tracking-[0.025rem]`,
+  limitText: `font-normal text-[0.87rem] md:text-base text-[#6E7187] tracking-[0.025rem]`,
+  limitAmount: `font-bold text-[0.87rem] md:text-base text-[#2B8AC8] tracking-[0.025rem]`,
   inputContainer: `flex flex-col mb-[1.25rem]`,
   inputTitleWrapper: `flex items-center justify-between`,
-  inputTitle: `font-normal text-[0.85rem] md:text-base text-[#110E2E] tracking-[0.025rem] mb-[0.94rem]`,
+  inputTitle: `font-normal text-[0.87rem] md:text-base text-[#110E2E] tracking-[0.025rem] mb-[0.94rem]`,
   inputWrapper: `w-full p-[0.8rem] border-[#E4E3EB] border-[1px] border-solid rounded-[0.5rem] flex justify-between items-center gap-[0.62rem]`,
   addWalletTxt: `text-base font-medium tracking-[0.025rem] bg-clip-text text-transparent bg-gradient-to-b from-[#449ECF] to-[#68BCC7] to-[#76C9BC] to-[#7BD2AA]`,
   inputBox: `w-full outline-none font-medium text-base md:text-[1.5rem] text-clip`,
@@ -20,7 +20,7 @@ const styles = {
   inputSelectBox: `w-full py-[1.3rem] pl-[0.8rem] outline-none bg-transparent font-normal text-base md:text-[1.5rem] text-[#1E1E1E] cursor-pointer`,
   inputFirstOption: `font-normal text-base md:text-[1.5rem] text-[#DBDBDF] hidden`,
   inputOption: `font-normal text-base md:text-[1.5rem] text-[#1E1E1E]`,
-  infoBox: `w-full font-normal text-[0.85rem] md:text-base tracking-[0.025rem] text-[#6E7187]  mt-[1.25rem]`,
+  infoBox: `w-full font-normal text-[0.87rem] md:text-base tracking-[0.025rem] text-[#6E7187]  mt-[1.25rem]`,
 };
 
 const MintDetails = () => {

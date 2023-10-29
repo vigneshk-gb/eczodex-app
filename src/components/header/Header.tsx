@@ -42,7 +42,7 @@ const Header = () => {
           <Image src={syncIconWhite} alt="syncIconWhite" width={20} />
         </Link>
       </div>
-      <AnimatePresence mode="wait" initial={false}>
+      <AnimatePresence>
         {isOpen && (
           <motion.div
             initial={{ x:-368, opacity: 0 }}

@@ -19,25 +19,25 @@ import ethIcon from "../../../public/Icons/eth-icon.svg";
 const styles = {
   sidebar: `w-full max-w-[22.43rem] h-screen rounded-r-[1rem] bg-[url('../../public/Images/SidebarBg.png')] bg-cover bg-center flex flex-col fixed max-xl:hidden`,
   logo: `mt-[2rem] mx-auto`,
-  navWrapper: `w-full h-full flex flex-col justify-between py-[1rem]`,
+  navWrapper: `w-full h-full flex flex-col justify-between py-[1rem] gap-y-[0.5rem]`,
   navItemWrapper: `flex flex-col`,
-  navContainer: `w-full h-fit mt-[3rem] flex flex-col gap-y-[1.5rem]`,
+  navContainer: `w-full h-fit mt-[1rem] flex flex-col gap-y-[1.5rem]`,
   navItem: `flex items-center justify-between`,
   navActiveIndicator: `absolute w-[0.3rem] h-[4rem] rounded-r-[0.75rem] bg-[#fff]`,
   navCtn: `flex ml-[1.75rem] gap-x-[1.38rem]`,
   navIcon: `w-[3rem] h-[3rem] rounded-md bg-white flex justify-center items-center`,
   navIconSecondary: `w-[3rem] h-[3rem] rounded-md bg-white flex justify-center items-center bg-opacity-10`,
   navText: `text-[#FFFFFF] self-center font-semibold text-base`,
-  subNavContainer: `w-full h-fit flex flex-col mt-[1.3rem] gap-y-[0.5rem] `,
+  subNavContainer: `w-full h-fit flex flex-col mt-[1rem] gap-y-[0.5rem] `,
   subNavIconContainer: `w-fit pt-[0.5rem] flex flex-col justify-center items-center gap-[0.5rem]`,
-  subNavTitle: `text-[#FFFFFF] text-[0.75rem] tracking-[0.11rem] font-normal uppercase mt-[2.19rem] ml-[2.25rem]`,
+  subNavTitle: `text-[#FFFFFF] text-[0.75rem] tracking-[0.11rem] font-normal uppercase ml-[2.25rem]`,
   subNavItem: `w-fit ml-[3rem] flex gap-[2.62rem] items-start`,
   subNavVerticalLine: `w-[1px] h-[2rem] bg-[#ffff]`,
   subNavItemMenuCircleActive: `w-[0.5rem] h-[0.5rem]  bg-[#fff] rounded-md`,
   subNavItemMenuCircle: `w-[0.5rem] h-[0.5rem] border border-[#fff] rounded-md`,
   subNavItemTxt: `text-base font-normal text-[#fff]`,
   subNavItemActiveTxt: `text-base font-semibold text-[#fff]`,
-  adminHeading: `text-[#FFFFFF] text-[0.75rem] tracking-[0.11rem] font-normal uppercase mt-auto ml-[2.25rem] mb-[1.3rem]`,
+  adminHeading: `text-[#FFFFFF] text-[0.75rem] tracking-[0.11rem] font-normal uppercase mt-auto ml-[2.25rem] mb-[1rem]`,
   adminContainer: `w-full h-fit flex flex-col gap-[2.19rem]`,
   adminItemWrapper: `flex flex-col`,
   arrowIcon: `mr-[2.43rem] cursor-pointer`,
@@ -71,9 +71,13 @@ const Sidebar = () => {
       setCurrentRoute("analytics");
     } else if (pathname === "/admin/user-account/connected-wallets") {
       setCurrentRoute("connected-wallets");
+      setIsSubNavOpen(true);
     } else if (pathname === "/admin/user-account/change-password") {
       setCurrentRoute("change-password");
+      setIsSubNavOpen(true);
     }
+
+
   }, [pathname]);
 
   return (
