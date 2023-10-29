@@ -6,7 +6,7 @@ import { HiMiniEyeSlash } from "react-icons/hi2";
 
 const styles = {
   container: `w-full h-full flex flex-col overflow-auto`,
-  reset: `w-full h-screen bg-[#ffff]  flex flex-col items-center justify-center mx-auto px-[1rem] md:px-[2.5rem]`,
+  reset: `w-full h-screen bg-[#ffff]  flex flex-col items-center justify-start md:justify-center mx-auto mt-[2.5rem] pt-[2.5rem] px-[1rem] md:px-[2.5rem]`,
   resetContainer: `w-full max-w-[28rem] flex flex-col justify-center gap-y-[2.5rem]`,
   title: `text-center text-[1.5rem] md:text-[2.5rem] font-semibold mb-[2rem] md:mb-[2.5rem]`,
   inputNameWrapper: `flex max-sm:flex-col gap-x-[1rem]`,
