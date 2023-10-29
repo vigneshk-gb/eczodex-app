@@ -9,28 +9,28 @@ import listNavArrowRight from "../../../../../public/Icons/nav-right.svg";
 import listNavArrowLeft from "../../../../../public/Icons/nav-left.svg";
 
 const styles = {
-  listContainer: `w-full min-h-[40rem] h-fit bg-[#ffff] overflow-hidden`,
-  tableContainer: `w-full h-full flex flex-col px-[2.44rem] pb-[2.06rem]`,
-  tableHeadContainer: `w-full h-[4.56rem] flex text-left`,
-  tableHeadTransaction: `basis-4/12 self-center flex gap-[0.62rem] font-normal text-base leading-[1.4rem] text-[#110E2E] px-[0.87rem]`,
-  tableHeadDate: `basis-2/12  self-center flex gap-[0.62rem] font-normal text-base leading-[1.4rem] text-[#110E2E] px-[0.87rem]`,
+  container: `w-full h-full flex flex-col overflow-auto`,
+  tableContainer: `w-full h-full flex flex-col pb-[2.06rem]`,
+  tableHeadContainer: `w-full h-[4.56rem] hidden md:flex items-center justify-evenly text-center`,
+  tableHeadTransaction: `basis-6/12 self-center flex gap-[0.62rem] font-normal text-base leading-[1.4rem] text-[#110E2E] px-[0.87rem]`,
+  tableHeadDate: `basis-3/12  self-center flex gap-[0.62rem] font-normal text-base leading-[1.4rem] text-[#110E2E] px-[0.87rem]`,
   tableHeadTime: `basis-2/12  self-center flex gap-[0.62rem] font-normal text-base leading-[1.4rem] text-[#110E2E] px-[0.87rem]`,
   tableHeadStatus: `basis-4/12  self-center flex justify-end gap-[0.62rem] font-normal text-base leading-[1.4rem] text-[#110E2E] px-[0.87rem]`,
   tableBodyWrapper: `w-full h-fit flex flex-col gap-[1.87rem]`,
   tableItemWrapper: `w-full h-fit flex flex-col border-[#E4E3EB] rounded-[0.5rem] border border-solid`,
-  tableBodyContainer: `w-full h-[4.56rem] flex`,
-  tableBodyTransaction: `basis-4/12  h-full flex items-center gap-[1.25rem] self-center px-[0.87rem]`,
-  tableBodyDate: `basis-2/12  self-center px-[0.87rem]`,
+  tableBodyContainer: `relative w-full h-auto min-h-[4.5rem] max-md:flex-col max-md:justify-start gap-y-[1rem] flex md:items-center py-[0.75rem]`,
+  tableBodyTransaction: `basis-6/12  h-full flex items-center gap-[1.25rem] self-center px-[0.87rem]`,
+  tableBodyDate: `basis-3/12  self-center px-[0.87rem]`,
   tableBodyTime: `basis-2/12 self-center px-[0.87rem]`,
   tableBodyStatus: `basis-4/12 self-center px-[0.87rem] flex items-center justify-end`,
-  assetLogoCtn: `w-[3.8rem] h-[3.8rem] bg-[#2B8AC8] bg-opacity-[0.05] rounded-[0.37rem] flex flex-col items-center justify-center gap-[0.25rem]`,
-  assetName: `text-base font-  leading-[1.4rem] text-[#110E2E]`,
-  dateTimeText: `text-base font-normal leading-[1.4rem] text-[#110E2E]`,
+  assetLogoCtn: `w-[2.5rem] md:w-[3.8rem] md:bg-[#2B8AC8] md:bg-opacity-5`,
+  assetName: `text-[0.85rem] md:text-base font-normal md:font-medium leading-[1.2rem] md:leading-[1.4rem] text-[#110E2E]`,
+  dateTimeText: `text-[0.75rem] md:text-base font-light md:font-normal leading-[1rem] md:leading-[1.4rem] text-[#110E2E] max`,
   timeText: `text-[1.1rem] leading-[1.75rem] font-extrabold text-[#110E2E]`,
   statusCtn: `w-full flex items-center justify-between`,
-  statusTextCompleted: `text-base font-bold text-[#7FD7A4] leading-[1.4rem] text-end`,
-  statusTextPending: `text-base font-bold text-[#D1CA7B] leading-[1.4rem] text-end`,
-  statusTextFailed: `text-base font-bold text-[#F17E7E] leading-[1.4rem] text-end`,
+  statusTextCompleted: `text-[0.85rem] md:text-base font-bold text-[#7FD7A4] leading-[1.2rem] md:leading-[1.4rem] text-end`,
+  statusTextPending: `text-[0.85rem] md:text-base font-bold text-[#D1CA7B] leading-[1.2rem] md:leading-[1.4rem] text-end`,
+  statusTextFailed: `text-[0.85rem] md:text-base  font-bold text-[#F17E7E] leading-[1.2rem] md:leading-[1.4rem]text-end`,
   statusBar: `flex`,
   dropDownArrow: `flex`,
   listNavContainer: `w-fit flex items-center gap-[0.69rem] mx-auto mt-[5rem]`,
@@ -43,7 +43,7 @@ const styles = {
 
 const TransactionList = () => {
   return (
-    <div className={styles.listContainer}>
+
       <div className={styles.tableContainer}>
         <div className={styles.tableHeadContainer}>
           <div className={styles.tableHeadTransaction}>
@@ -88,7 +88,7 @@ const TransactionList = () => {
             <div className={styles.tableBodyContainer}>
               <div className={styles.tableBodyTransaction}>
                 <div className={styles.assetLogoCtn}>
-                  <Image src={eczodexLogo} alt="eczodexLogo" width={61} />
+                  <Image src={eczodexLogo} alt="eczodexLogo"/>
                 </div>
                 <div className={styles.assetName}>Mint Eczodex Stablecoin</div>
               </div>
@@ -107,7 +107,7 @@ const TransactionList = () => {
             <div className={styles.tableBodyContainer}>
               <div className={styles.tableBodyTransaction}>
                 <div className={styles.assetLogoCtn}>
-                  <Image src={eczodexLogo} alt="eczodexLogo" width={61} />
+                  <Image src={eczodexLogo} alt="eczodexLogo"/>
                 </div>
                 <div className={styles.assetName}>Adjust Collateral</div>
               </div>
@@ -126,7 +126,7 @@ const TransactionList = () => {
             <div className={styles.tableBodyContainer}>
               <div className={styles.tableBodyTransaction}>
                 <div className={styles.assetLogoCtn}>
-                  <Image src={eczodexLogo} alt="eczodexLogo" width={61} />
+                  <Image src={eczodexLogo} alt="eczodexLogo"/>
                 </div>
                 <div className={styles.assetName}>Adjust Debt</div>
               </div>
@@ -145,7 +145,7 @@ const TransactionList = () => {
             <div className={styles.tableBodyContainer}>
               <div className={styles.tableBodyTransaction}>
                 <div className={styles.assetLogoCtn}>
-                  <Image src={usdcLogo} alt="usdcLogo" width={61} />
+                  <Image src={usdcLogo} alt="usdcLogo"/>
                 </div>
                 <div className={styles.assetName}>Mint Wrapped USDC</div>
               </div>
@@ -164,7 +164,7 @@ const TransactionList = () => {
             <div className={styles.tableBodyContainer}>
               <div className={styles.tableBodyTransaction}>
                 <div className={styles.assetLogoCtn}>
-                  <Image src={eczodexLogo} alt="eczodexLogo" width={61} />
+                  <Image src={eczodexLogo} alt="eczodexLogo"/>
                 </div>
                 <div className={styles.assetName}>Mint Eczodex Stablecoin</div>
               </div>
@@ -206,7 +206,6 @@ const TransactionList = () => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 

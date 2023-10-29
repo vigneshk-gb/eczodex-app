@@ -7,7 +7,7 @@ const styles = {
   hr: `flex-1 h-[1px] border-[#E4E3EB]`,
   subHeadText: `text-[0.87rem] md:text-[1.25rem] font-medium text-[#6E7187] text-center mx-[1rem] md:mx-[2rem]`,
   hr2: `w-full h-[1px] border-[#E4E3EB] px-[0.5rem] md:px-[1rem]`, 
-  transferContainer: `w-full h-auto mx-auto flex flex-col justify-evenly items-center gap-[1rem] px-[1rem] md:px-[2.5rem]`,
+  transferContainer: `w-full h-auto mx-auto px-[0.5rem] md:px-[1rem] flex flex-col justify-evenly items-center gap-[1rem] px-[1rem] md:px-[2.5rem]`,
   topContainer: `w-full flex-col flex justify-center items-center gap-y-[1.5rem] gap-x-[2.5rem] `,
   limitInfoBox: `flex flex-col justify-center items-center gap-[0.25rem]`,
   limitText: `font-normal text-[0.87rem] md:text-base text-[#6E7187] tracking-[0.025rem]`,
