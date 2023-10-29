@@ -45,7 +45,7 @@ const Mint = () => {
 
   return (
     <div className={styles.container}>
-      <Header/>
+      <Header />
       <div className={styles.mint}>
         <div className={styles.headContainer}>
           {activeTab !== "six" && (
@@ -65,19 +65,33 @@ const Mint = () => {
                 className={
                   activeTab === "one" ? styles.activeMenuItem : styles.menuItem
                 }
+                onClick={() => setActiveTab("one")}
               >
-                <span className={
-                  activeTab === "one" ? styles.activeMenuItemTxt : styles.menuItemTxt
-                }>Step 1</span>
+                <span
+                  className={
+                    activeTab === "one"
+                      ? styles.activeMenuItemTxt
+                      : styles.menuItemTxt
+                  }
+                >
+                  Step 1
+                </span>
               </div>
               <div
                 className={
                   activeTab === "two" ? styles.activeMenuItem : styles.menuItem
                 }
+                onClick={() => setActiveTab("two")}
               >
-                 <span className={
-                  activeTab === "two" ? styles.activeMenuItemTxt : styles.menuItemTxt
-                }>Step 2</span>
+                <span
+                  className={
+                    activeTab === "two"
+                      ? styles.activeMenuItemTxt
+                      : styles.menuItemTxt
+                  }
+                >
+                  Step 2
+                </span>
               </div>
               <div
                 className={
@@ -85,19 +99,33 @@ const Mint = () => {
                     ? styles.activeMenuItem
                     : styles.menuItem
                 }
+                onClick={() => setActiveTab("three")}
               >
-                 <span className={
-                  activeTab === "three" ? styles.activeMenuItemTxt : styles.menuItemTxt
-                }>Step 3</span>
+                <span
+                  className={
+                    activeTab === "three"
+                      ? styles.activeMenuItemTxt
+                      : styles.menuItemTxt
+                  }
+                >
+                  Step 3
+                </span>
               </div>
               <div
                 className={
                   activeTab === "four" ? styles.activeMenuItem : styles.menuItem
                 }
+                onClick={() => setActiveTab("four")}
               >
-                 <span className={
-                  activeTab === "four" ? styles.activeMenuItemTxt : styles.menuItemTxt
-                }>Step 4</span>
+                <span
+                  className={
+                    activeTab === "four"
+                      ? styles.activeMenuItemTxt
+                      : styles.menuItemTxt
+                  }
+                >
+                  Step 4
+                </span>
               </div>
               <div
                 className={
@@ -105,10 +133,17 @@ const Mint = () => {
                     ? styles.activemenuItemL
                     : styles.menuItemL
                 }
+                onClick={() => setActiveTab("five")}
               >
-                 <span className={
-                  activeTab === "five" ? styles.activeMenuItemTxt : styles.menuItemTxt
-                }>Step 5</span>
+                <span
+                  className={
+                    activeTab === "five"
+                      ? styles.activeMenuItemTxt
+                      : styles.menuItemTxt
+                  }
+                >
+                  Step 5
+                </span>
               </div>
             </div>
           )}

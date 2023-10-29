@@ -9,21 +9,26 @@ import AdjustDebt from "./AdjustDebt";
 import ChooseBank from "./ChooseBank";
 import ConfirmTransfer from "./ConfirmTransfer";
 import SelectWallets from "./SelectWallets";
+import Header from "@/components/header/Header";
+import TransactionStatus from "./TransactionStatus";
 
 
 const styles = {
-  mint: `w-[73rem] min-h-[55rem] h-fit bg-[#ffff] border-[#E4E3EB] border-[1px] border-solid mx-auto self-center rounded-[1rem] p-[4.75rem]`,
+  container: `w-full h-full flex flex-col overflow-auto`,
+  redeemAsset: `w-full max-w-[73rem] min-h-screen bg-[#ffff] border-[#E4E3EB] border-[1px] border-solid mx-auto md:my-[0.5rem] self-center rounded-[1rem] p-[1rem] md:p-[2.5rem]`,
   headContainer: `flex`,
-  prevNavLogo: `absolute w-[3.81rem] h-[3.81rem]`,
+  prevNavLogo: `absolute w-[3.81rem] h-[3.81rem] hidden md:block`,
   titleContainer: `mx-auto`,
-  subTitle: `text-[#6E7187] font-normal text-base leading-normal capitalize text-center`,
-  title: `text-[#110E2E] font-medium text-[2rem] leading-normal capitalize text-center tracking-[0.05rem]`,
-  mintBox: `w-[51.56rem] h-fit pb-[2.5rem] mt-[2rem] mx-auto rounded-[1rem] border-[#E4E3EB] border-[1px] border-solid overflow-hidden flex flex-col items-center`,
-  menuContainer: `w-full h-fit flex border-box`,
-  menuItem: `basis-1/4 bg-[#ffff] p-[1rem] border-[#E4E3EB] border-r-[1px] border-b-[1px] border-solid text-center text-[0.8rem] font-[400] tracking-[0.1rem] uppercase text-[#6E7187]`,
-  activeMenuItem: `basis-1/4 bg-[#2B8AC8] p-[1rem] border-[#E4E3EB] border-r-[1px] border-b-[1px] border-solid text-center text-[0.8rem] font-[400] tracking-[0.1rem] uppercase text-[#ffff]`,
-  menuItemL: `basis-1/4 bg-[#ffff] p-[1rem] border-[#E4E3EB] border-b-[1px] border-solid text-center text-[0.8rem] font-[400] tracking-[0.1rem] uppercase text-[#6E7187]`,
-  activeMenuItemL: `basis-1/4 bg-[#2B8AC8] p-[1rem] border-[#E4E3EB] border-b-[1px] border-solid text-center text-[0.8rem] font-[400] tracking-[0.1rem] uppercase text-[#ffff]`,
+  subTitle: `text-[#6E7187] font-normal text-[0.75rem] md:text-base leading-normal capitalize text-center`,
+  title: `text-[#110E2E] font-medium text-[1.25rem] md:text-[2rem] leading-normal capitalize text-center tracking-[0.05rem]`,
+  mintBox: `w-full max-w-[51.56rem] h-fit md:pb-[2rem] mt-[2rem] mx-auto rounded-[1rem] border-[#E4E3EB] md:border-[1px] border-solid flex flex-col items-center`,
+  menuContainer: `w-full h-fit flex max-md:rounded-[1rem] rounded-t-[1rem] overflow-hidden border-[#E4E3EB] max-md:border`,
+  menuItem: `basis-1/4 flex items-center justify-center bg-[#ffff] p-[0.5rem] md:p-[1rem] border-[#E4E3EB] md:border-b border-r border-solid `,
+  menuItemTxt: `text-[0.8rem] font-normal tracking-[0.1rem] uppercase text-[#6E7187] hidden md:block`,
+  activeMenuItemTxt: `text-[0.8rem] font-normal tracking-[0.1rem] uppercase text-[#ffff] hidden md:block`,
+  activeMenuItem: `basis-1/4 h-auto flex items-center justify-center bg-[#2B8AC8] md:p-y-[1rem]  border-[#E4E3EB] max-md:border border-r border-b border-solid `,
+  menuItemL: `basis-1/4 flex items-center justify-center bg-[#ffff] md:p-[1rem] border-[#E4E3EB] md:border-b border-solid `,
+  activemenuItemL: `basis-1/4 h-auto flex items-center justify-center bg-[#2B8AC8] md:p-y-[1rem]  md:rounded-tr-[1rem] border-[#E4E3EB] max-md:border border-l border-b border-solid `,
   subHead: `w-100 h-auto mx-[2.81rem] my-[2.5rem] flex items-center justify-center`,
   hr: `w-full h-[1px] border-[#E4E3EB]`,
   subHeadText: `w-[33.25rem] h-[1.56rem] text-base font-medium text-[#6E7187] text-center`,
@@ -31,15 +36,17 @@ const styles = {
   asset: `w-[1/2] h-[4.25rem] border-[#E4E3EB] border-[1px] border-solid rounded-[1rem] flex items-center justify-between px-[1.56rem] py-[1.69rem]`,
   assetActiveName: `font-semibold text-base text-[#110E2E]`,
   assetName: `font-medium text-base text-[#110E2E]`,
-  primaryBtn: `w-[28.37rem] py-[1.21rem] mx-auto mt-[2rem] text-base font-semibold text-[#ffff] gap-[0.62rem] rounded-[0.37rem] bg-[url('../../public/Images/Rectangle1.png')] bg-cover  flex justify-center items-center`,
-  exitBtn: `font-bold text-[1rem] text-[#2B8AC8] tracking-[0.025rem] text-center mt-[1.5rem]`
+  primaryBtn: `w-full max-w-[28rem] py-[1rem] md:py-[1.21rem] mx-auto my-[1rem] text-[0.87rem] md:text-base font-semibold text-[#ffff] gap-[0.62rem] rounded-[0.37rem] bg-[url('../../public/Images/Rectangle1.png')] bg-cover  flex justify-center items-center`,
+  exitBtn: `font-semibold text-[0.87rem] md:text-base text-[#2B8AC8] tracking-[0.025rem] text-center mt-[1.5rem]`,
 };
 
 const RedeemAsset = () => {
   const [activeTab, setActiveTab] = useState<string>("two");
 
   return (
-    <div className={styles.mint}>
+    <div className={styles.container}>
+      <Header/>
+      <div className={styles.redeemAsset}>
       <div className={styles.headContainer}>
          {activeTab !== "five" && (
           <Link href="/" className={styles.prevNavLogo}>
@@ -53,40 +60,82 @@ const RedeemAsset = () => {
       </div>
       <div className={styles.mintBox}>
       {activeTab !== "five" && (
-          <div className={styles.menuContainer}>
-            <div
-              className={
-                activeTab === "one" ? styles.activeMenuItem : styles.menuItem
-              }
-            >
-              Step 1
+            <div className={styles.menuContainer}>
+              <div
+                className={
+                  activeTab === "one" ? styles.activeMenuItem : styles.menuItem
+                }
+                onClick={() => setActiveTab("one")}
+              >
+                <span
+                  className={
+                    activeTab === "one"
+                      ? styles.activeMenuItemTxt
+                      : styles.menuItemTxt
+                  }
+                >
+                  Step 1
+                </span>
+              </div>
+              <div
+                className={
+                  activeTab === "two" ? styles.activeMenuItem : styles.menuItem
+                }
+                onClick={() => setActiveTab("two")}
+              >
+                <span
+                  className={
+                    activeTab === "two"
+                      ? styles.activeMenuItemTxt
+                      : styles.menuItemTxt
+                  }
+                >
+                  Step 2
+                </span>
+              </div>
+              <div
+                className={
+                  activeTab === "three"
+                    ? styles.activeMenuItem
+                    : styles.menuItem
+                }
+                onClick={() => setActiveTab("three")}
+              >
+                <span
+                  className={
+                    activeTab === "three"
+                      ? styles.activeMenuItemTxt
+                      : styles.menuItemTxt
+                  }
+                >
+                  Step 3
+                </span>
+              </div>
+              <div
+                className={
+                  activeTab === "four"
+                    ? styles.activemenuItemL
+                    : styles.menuItemL
+                }
+                onClick={() => setActiveTab("four")}
+              >
+                <span
+                  className={
+                    activeTab === "four"
+                      ? styles.activeMenuItemTxt
+                      : styles.menuItemTxt
+                  }
+                >
+                  Step 4
+                </span>
+              </div>
             </div>
-            <div
-              className={
-                activeTab === "two" ? styles.activeMenuItem : styles.menuItem
-              }
-            >
-              Step 2
-            </div>
-            <div
-              className={
-                activeTab === "three" ? styles.activeMenuItem : styles.menuItem
-              }
-            >
-              Step 3
-            </div>
-            <div
-              className={
-                activeTab === "four" ? styles.activeMenuItem : styles.menuItem
-              }
-            >
-              Step 4
-            </div>
-          </div>
-        )}
+          )}
         {activeTab === "two" && <AdjustDebt />}
         {activeTab === "three" && <ChooseBank />}
         {activeTab === "four" && <ConfirmTransfer />}
+        {activeTab === "five" && <TransactionStatus />}
+        
       </div>
       {activeTab === "one" && (
         <div onClick={() => setActiveTab("two")} className={styles.primaryBtn}>
@@ -108,6 +157,7 @@ const RedeemAsset = () => {
           Next
         </div>
       )}
+    </div>
     </div>
   );
 };

@@ -19,7 +19,7 @@ import hamburgerIcon from "../../../public/Icons/hamburger.svg";
 
 const styles = {
   header: `w-full h-[3.8rem] mt-[2rem] p-[1rem] flex items-center justify-between xl:hidden`,
-  sidebar: `w-full min-w-[22.43rem] h-screen md:rounded-r-[1rem] bg-[url('../../public/Images/SidebarBg.png')] bg-cover bg-center flex flex-col xl:hidden overflow-auto`,
+  sidebar: `w-full min-w-[22.43rem] h-full md:rounded-r-[1rem] bg-[url('../../public/Images/SidebarBg.png')] bg-cover bg-center flex flex-col xl:hidden overflow-auto`,
   logo: `mx-auto`,
   navWrapper: `w-full h-full flex flex-col gap-[1rem] justify-between pb-[1rem] gap-y-[0.5rem]`,
   navItemWrapper: `flex flex-col`,

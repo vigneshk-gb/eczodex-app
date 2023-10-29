@@ -2,12 +2,13 @@ import React from "react";
 import Image from "next/image";
 
 import radioIcon from "../../../../../../public/Icons/radio-icon.svg";
+import RadioGroup from "@/components/RadioGroup";
 
 const styles = {
-  subHead: `w-100 h-auto mx-[2.81rem] my-[2.5rem] flex items-center justify-center`,
-  hr: `w-full h-[1px] border-[#E4E3EB]`,
-  subHeadText: `w-[33.25rem] h-[1.56rem] text-base font-[500] text-[#6E7187] text-center`,
-  assetContainer: `w-full h-auto px-[2.81rem] grid grid-cols-2  gap-[0.63rem] `,
+  subHead: `w-full h-auto mx-[2.81rem] my-[1.5rem] md:my-[2.5rem] flex items-center justify-evenly px-[1rem] md:px-[2.5rem]`,
+  hr: `flex-1 h-[1px] border-[#E4E3EB]`,
+  subHeadText: `text-[0.87rem] md:text-[1.25rem] font-medium text-[#6E7187] text-center mx-[1rem] md:mx-[2rem]`,
+  assetContainer: `w-full h-auto grid grid-cols-1 md:grid-cols-2  gap-[0.63rem] px-[1rem] md:px-[2.5rem]`,
   asset: `w-[1/2] h-[4.25rem] border-[#E4E3EB] border-[1px] border-solid rounded-[1rem] flex items-center justify-between px-[1.56rem] py-[1.69rem]`,
   assetActiveName: `font-semibold text-base text-[#110E2E]`,
   assetName: `font-medium text-base text-[#110E2E]`,
@@ -17,6 +18,11 @@ const styles = {
 
 
 const SelectType = () => {
+  const itemList = [
+    "Collateral",
+    "Debt",
+  ];
+
   return (
     <>
       <div className={styles.subHead}>
@@ -24,32 +30,7 @@ const SelectType = () => {
         <div className={styles.subHeadText}>Select Adjustment Type</div>
         <hr className={styles.hr} />
       </div>
-      <div className={styles.assetContainer}>
-        <div className={styles.asset}>
-          <div className={styles.assetName}>Collateral</div>
-          <input
-            type="radio"
-            id="radio1"
-            name="radio-group"
-            className="hidden"
-          />
-          <label htmlFor="radio1">
-            {/* <Image src={radioIcon} alt="radio-icon" width={20} /> */}
-          </label>
-        </div>
-        <div className={styles.asset}>
-          <div className={styles.assetActiveName}>Debt</div>
-          <input
-            type="radio"
-            id="radio1"
-            name="radio-group"
-            className="hidden"
-          />
-          <label htmlFor="radio1">
-            <Image src={radioIcon} alt="radio-icon" width={20} />
-          </label>
-        </div>
-      </div>
+      <RadioGroup options={itemList}/>
     </>
   )
 }

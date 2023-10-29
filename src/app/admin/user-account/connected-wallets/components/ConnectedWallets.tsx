@@ -50,7 +50,7 @@ const styles = {
   addNewBtn: `w-full h-fit flex items-center justify-center border-[#449ECF] rounded-[0.5rem] border border-solid py-[0.94rem] bg-[#449ECF] bg-opacity-5`,
   addNewCtn: `flex items-center gap-[1.6rem]`,
   inputContainer: `w-full h-fit max-md:flex-col flex bg-[#F6F8FA] rounded-[0.5rem] p-[0.88rem] gap-[1rem]`,
-  walletInput: `w-full md:basis-2/6  px-[rem] py-[0.88rem] outline-none font-medium text-[0.87rem] md:text-base text-clip rounded-[0.5rem] placeholder:text-base placeholder:text-[#6E7187] placeholder:font-normal`,
+  walletInput: `w-full md:basis-2/6  px-[1rem] py-[0.88rem] outline-none font-medium text-[0.87rem] md:text-base text-clip rounded-[0.5rem] placeholder:text-base placeholder:text-[#6E7187] placeholder:font-normal`,
   chainInput: `w-full md:basis-2/6  px-[1rem] py-[0.88rem] outline-none font-medium text-[0.87rem] md:text-base text-clip rounded-[0.5rem] placeholder:text-base placeholder:text-[#6E7187] placeholder:font-normal`,
   walletInputContainer: `w-full md:basis-2/6 max-md:flex-col flex max-md:items-end items-center justify-between gap-[1rem] `,
   submitContainer: `flex gap-[0.2rem]`,
