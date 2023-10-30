@@ -24,7 +24,7 @@ const styles = {
     inputFirstOption: `font-medium text-[1.4rem]`,
     inputOption: `font-medium text-[1.4rem] text-black`,
     transferFromBox: `w-full grid grid-cols-2 md:grid-cols-3 gap-[0.84rem]`,
-    transferFromItem: `w-auto h-fit border-box p-[0.34rem] border-[#E4E3EB] border-[1px] border-solid rounded-[0.5rem] flex md:flex-col items-center justify-evenly md:justify-center gap-[0.94rem]`,
+    transferFromItem: `w-auto h-fit border-box p-[0.34rem] border-[#E4E3EB] border-[1px] border-solid rounded-[0.5rem] flex md:flex-col items-center justify-evenly md:justify-center md:gap-[0.94rem]`,
     transferFromItemActive: `w-auto h-fit p-[0.34rem] bg-[#449ECF] bg-opacity-5 border-[#449ECF] border-[1px] border-solid rounded-[0.5rem] flex md:flex-col items-center justify-evenly md:justify-center gap-[0.94rem]`,
     itemIcon: `w-[2.81rem] h-[2.81rem]`,
     itemIconSecondary: `w-[2.81rem] h-[2.81rem] flex items-center justify-center`,
