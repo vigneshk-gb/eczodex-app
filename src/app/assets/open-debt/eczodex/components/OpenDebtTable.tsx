@@ -1,5 +1,7 @@
-import React from "react";
+"use client"
+import React, { useState } from "react";
 import Image from "next/image";
+import { motion, AnimatePresence, animate } from "framer-motion";
 
 import arrowDownLogo from "../../../../../../public/Icons/polygon-down-icon.svg";
 import checkLogo from "../../../../../../public/Icons/check-icon.svg";
@@ -25,9 +27,9 @@ const styles = {
   tableHeadAmountBorrowed: `basis-2/12  self-center flex gap-[0.62rem] font-normal text-base leading-[1.4rem] text-[#110E2E] px-[0.87rem]`,
   tableHeadLiquidationPrice: `basis-2/12  self-center flex gap-[0.62rem] font-normal text-base leading-[1.4rem] text-[#110E2E] px-[0.87rem]`,
   tableHeadStatus: `basis-3/12  self-center flex gap-[0.62rem] font-normal text-base leading-[1.4rem] text-[#110E2E] px-[0.87rem]`,
-  tableBodyWrapper: `w-full h-fit flex flex-col gap-[1.87rem]`,
-  tableItemWrapper: `w-full h-fit flex flex-col border-[#E4E3EB] rounded-[0.5rem] border border-solid`,
-  tableBodyContainer: `w-full h-[4.56rem] flex`,
+  tableBodyWrapper: `bg-gray-500 w-full h-fit flex flex-col gap-[1.87rem]`,
+  tableItemWrapper: `bg-red-500 w-full h-fit flex flex-col border-[#E4E3EB] rounded-[0.5rem] border border-solid`,
+  tableBodyContainer: `bg-green-500 w-full h-[4.56rem] flex`,
   tableBodyContainerToggled: `w-full h-[4.56rem] bg-[#2B8AC8] bg-opacity-[0.05] flex`,
   toggledContainer: `w-full h-[5.56rem] bg-[#2B8AC8] bg-opacity-[0.05] flex border-solid border-t-2 border-opacity-10 border-[#2B8AC8]`,
   toggledCtn: `flex flex-col gap-[0.5rem]`,
@@ -41,10 +43,10 @@ const styles = {
   selectLogoCtn: `w-[3.8rem] h-[3.8rem] bg-[#2B8AC8] bg-opacity-[0.05] rounded-[0.37rem] flex flex-col items-center justify-center gap-[0.25rem]`,
   selectLogoTxt: `text-[0.75rem] font-medium tracking-[0.018rem] bg-clip-text text-transparent bg-gradient-to-b from-[#449ECF] to-[#68BCC7] to-[#76C9BC] to-[#7BD2AA] `,
   symbolCtn: `flex gap-[1.39rem] ml-[2.19rem]`,
-  symbolText: `text-base leading-[1.4rem] font-normal`,
-  quantityText: `text-[1.1rem] leading-[1.75rem] font-extrabold text-[#A4ACD1]`,
-  amountBorrowedText: `text-[1.1rem] leading-[1.75rem] font-extrabold text-[#110E2E]`,
-  liquidationPriceText: `text-[1.1rem] leading-[1.75rem] font-extrabold text-[#2A9DBD]`,
+  symbolText: `text-[0.87rem] md:text-base leading-[1.2rem] md:leading-[1.4rem] font-normal`,
+  quantityText: `text-[0.87rem] md:text-[1.25rem] leading-[1.22rem] md:leading-[1.75rem] font-extrabold text-[#A4ACD1]`,
+  amountBorrowedText: `text-[0.87rem] md:text-[1.25rem] leading-[1.22rem] md:leading-[1.75rem] font-extrabold text-[#110E2E]`,
+  liquidationPriceText: `text-[0.87rem] md:text-[1.25rem] leading-[1.22rem] md:leading-[1.75rem] font-extrabold text-[#2A9DBD]`,
   statusContainer: `w-[9.6rem] h-fit flex flex-col gap-[0.94rem]`,
   statusCtn: `w-full flex items-center justify-between`,
   statusText: `text-[0.82rem] font-light text-[#110E2E] leading-[0.87rem]`,
@@ -52,7 +54,8 @@ const styles = {
   statusTextStable: `uppercase leading-[0.87rem] tracking-[0.062rem] font-medium text-[0.82rem] text-[#2586C5]`,
   statusTextRisk: `uppercase leading-[0.87rem] tracking-[0.062rem] font-medium text-[0.82rem] text-[#D1CA7B]`,
   statusBar: `flex`,
-  dropDownArrow: `flex`,
+  dropDownArrow: `flex `,
+  dropDownArrowToggled: `flex rotate-180`,
   listNavContainer: `w-full md:w-fit flex justify-center items-center gap-[0.69rem] mx-auto mt-[0.5rem] md:mt-[2rem]`,
   navContainer: `flex items-center gap-[0.69rem]`,
   listNavArrow: ``,
@@ -62,6 +65,18 @@ const styles = {
 };
 
 const OpenDebtTable = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  function toggleOpen() {
+    setIsOpen(!isOpen);
+  }
+
+  const fadeInVariants = {
+    hidden: { opacity:  0, height: 0 },
+    visible: { opacity: 1, height: '88px', transition: { duration: 0.2 } },
+  };
+
+
   return (
     <div className={styles.listContainer}>
       <div className={styles.tableContainer}>
@@ -185,7 +200,7 @@ const OpenDebtTable = () => {
                     <Image src={statusStable} alt="statusSafe" width={155} />
                   </div>
                 </div>
-                <div className={styles.dropDownArrow}>
+                <div className={styles.dropDownArrow} onClick={toggleOpen}>
                   <Image
                     src={dropDownArrowDown}
                     alt="dropDownArrowDown"
@@ -194,34 +209,39 @@ const OpenDebtTable = () => {
                 </div>
               </div>
             </div>
-            <div className={styles.toggledContainer}>
-              <div className={styles.tableBodySymbol}></div>
-              <div className={styles.tableBodyQuantity}>
-                <div className={styles.toggledCtn}>
-                  <div className={styles.toggledCtnTxt}>Quantity</div>
-                  <div className={styles.toggledCtnTxtSec}>7.69</div>
+              <motion.div className={styles.toggledContainer}
+              initial="hidden"
+              animate={isOpen ? 'visible' : 'hidden'}
+              variants={fadeInVariants}
+              >
+                <div className={styles.tableBodySymbol}></div>
+                <div className={styles.tableBodyQuantity}>
+                  <div className={styles.toggledCtn}>
+                    <div className={styles.toggledCtnTxt}>Quantity</div>
+                    <div className={styles.toggledCtnTxtSec}>7.69</div>
+                  </div>
                 </div>
-              </div>
-              <div className={styles.tableBodyAmountBorrowed}>
-                <div className={styles.toggledCtn}>
-                  <div className={styles.toggledCtnTxt}>Amount Borrowed</div>
-                  <div className={styles.toggledCtnTxtSec}>$ 5,000.00</div>
+                <div className={styles.tableBodyAmountBorrowed}>
+                  <div className={styles.toggledCtn}>
+                    <div className={styles.toggledCtnTxt}>Amount Borrowed</div>
+                    <div className={styles.toggledCtnTxtSec}>$ 5,000.00</div>
+                  </div>
                 </div>
-              </div>
-              <div className={styles.tableBodyLiquidationPrice}>
-                <div className={styles.toggledCtn}>
-                  <div className={styles.toggledCtnTxt}>Transaction Date</div>
-                  <div className={styles.toggledCtnTxtSec}>3 August 2022</div>
+                <div className={styles.tableBodyLiquidationPrice}>
+                  <div className={styles.toggledCtn}>
+                    <div className={styles.toggledCtnTxt}>Transaction Date</div>
+                    <div className={styles.toggledCtnTxtSec}>3 August 2022</div>
+                  </div>
                 </div>
-              </div>
-              <div className={styles.tableBodyStatus}>
-                <div className={styles.toggledCtn}>
-                  <div className={styles.toggledCtnTxt}>Time</div>
-                  <div className={styles.toggledCtnTxtSec}>10:32 PM</div>
+                <div className={styles.tableBodyStatus}>
+                  <div className={styles.toggledCtn}>
+                    <div className={styles.toggledCtnTxt}>Time</div>
+                    <div className={styles.toggledCtnTxtSec}>10:32 PM</div>
+                  </div>
                 </div>
-              </div>
-            </div>
+              </motion.div>
           </div>
+          <div className={styles.tableItemWrapper}>
           <div className={styles.tableBodyContainer}>
             <div className={styles.tableBodySymbol}>
               <div className={styles.selectLogoCtn}>
@@ -261,6 +281,8 @@ const OpenDebtTable = () => {
               </div>
             </div>
           </div>
+          </div>
+          <div className={styles.tableItemWrapper}>
           <div className={styles.tableBodyContainer}>
             <div className={styles.tableBodySymbol}>
               <div className={styles.selectLogoCtn}>
@@ -300,6 +322,8 @@ const OpenDebtTable = () => {
               </div>
             </div>
           </div>
+          </div>
+          <div className={styles.tableItemWrapper}>
           <div className={styles.tableBodyContainer}>
             <div className={styles.tableBodySymbol}>
               <div className={styles.selectLogoCtn}>
@@ -338,6 +362,7 @@ const OpenDebtTable = () => {
                 />
               </div>
             </div>
+          </div>
           </div>
           <div className={styles.listNavContainer}>
             <div className={styles.navContainer}>
