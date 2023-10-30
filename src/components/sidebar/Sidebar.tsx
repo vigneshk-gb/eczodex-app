@@ -22,7 +22,7 @@ const styles = {
   navWrapper: `w-full h-full flex flex-col justify-between py-[1rem] gap-y-[0.5rem]`,
   navItemWrapper: `flex flex-col`,
   navContainer: `w-full h-fit mt-[1rem] flex flex-col gap-y-[1.5rem]`,
-  navItem: `flex items-center justify-between`,
+  navItem: `flex items-center justify-between cursor-pointer`,
   navActiveIndicator: `absolute w-[0.3rem] h-[4rem] rounded-r-[0.75rem] bg-[#fff]`,
   navCtn: `flex ml-[1.75rem] gap-x-[1.38rem]`,
   navIcon: `w-[3rem] h-[3rem] rounded-md bg-white flex justify-center items-center`,
@@ -31,7 +31,7 @@ const styles = {
   subNavContainer: `w-full h-fit flex flex-col mt-[1rem] gap-y-[0.5rem] `,
   subNavIconContainer: `w-fit pt-[0.5rem] flex flex-col justify-center items-center gap-[0.5rem]`,
   subNavTitle: `text-[#FFFFFF] text-[0.75rem] tracking-[0.11rem] font-normal uppercase ml-[2.25rem]`,
-  subNavItem: `w-fit ml-[3rem] flex gap-[2.62rem] items-start`,
+  subNavItem: `w-fit ml-[3rem] flex gap-[2.62rem] items-start `,
   subNavVerticalLine: `w-[1px] h-[2rem] bg-[#ffff]`,
   subNavItemMenuCircleActive: `w-[0.5rem] h-[0.5rem]  bg-[#fff] rounded-md`,
   subNavItemMenuCircle: `w-[0.5rem] h-[0.5rem] border border-[#fff] rounded-md`,
@@ -76,9 +76,11 @@ const Sidebar = () => {
       setCurrentRoute("change-password");
       setIsSubNavOpen(true);
     }
-
-
   }, [pathname]);
+
+  const toggleSubNav = () => {
+    setIsSubNavOpen(!isSubNavOpen);
+  };
 
   return (
     <div className={styles.sidebar}>
@@ -235,7 +237,7 @@ const Sidebar = () => {
           <div className={styles.adminHeading}>Admin</div>
           <div className={styles.adminContainer}>
             <div className={styles.adminItemWrapper}>
-              <div className={styles.navItem}>
+              <div className={styles.navItem} onClick={toggleSubNav}>
                 {currentRoute === "connected-wallets" ||
                 currentRoute === "change-password" ? (
                   <div className={styles.navActiveIndicator}></div>
@@ -265,70 +267,68 @@ const Sidebar = () => {
                   <div className={styles.navText}>User Account</div>
                 </div>
                 {isSubNavOpen ? (
-                <div
-                  className={styles.arrowIconActive}
-                  onClick={() => setIsSubNavOpen(false)}
-                >
-                  <Image src={rightArrowIcon} alt="arrow-icon" width={7} />
-                </div>
-              ) : (
-                <div
-                  className={styles.arrowIcon}
-                  onClick={() => setIsSubNavOpen(true)}
-                >
-                  <Image src={rightArrowIcon} alt="arrow-icon" width={7} />
-                </div>
-              )}
+                  <div
+                    className={styles.arrowIconActive}
+                    onClick={() => setIsSubNavOpen(false)}
+                  >
+                    <Image src={rightArrowIcon} alt="arrow-icon" width={7} />
+                  </div>
+                ) : (
+                  <div
+                    className={styles.arrowIcon}
+                    onClick={() => setIsSubNavOpen(true)}
+                  >
+                    <Image src={rightArrowIcon} alt="arrow-icon" width={7} />
+                  </div>
+                )}
               </div>
-              {
-                isSubNavOpen && (
-                  <div className={styles.subNavContainer}>
-                <div className={styles.subNavItem}>
-                  <div className={styles.subNavIconContainer}>
-                    <div
+              {isSubNavOpen && (
+                <div className={styles.subNavContainer}>
+                  <div className={styles.subNavItem}>
+                    <div className={styles.subNavIconContainer}>
+                      <div
+                        className={
+                          currentRoute === "connected-wallets"
+                            ? styles.subNavItemMenuCircleActive
+                            : styles.subNavItemMenuCircle
+                        }
+                      ></div>
+                      <div className={styles.subNavVerticalLine}></div>
+                    </div>
+                    <Link
+                      href="/admin/user-account/connected-wallets"
                       className={
                         currentRoute === "connected-wallets"
-                          ? styles.subNavItemMenuCircleActive
-                          : styles.subNavItemMenuCircle
+                          ? styles.subNavItemActiveTxt
+                          : styles.subNavItemTxt
                       }
-                    ></div>
-                    <div className={styles.subNavVerticalLine}></div>
+                    >
+                      Connected Wallets
+                    </Link>
                   </div>
-                  <Link
-                    href="/admin/user-account/connected-wallets"
-                    className={
-                      currentRoute === "connected-wallets"
-                        ? styles.subNavItemActiveTxt
-                        : styles.subNavItemTxt
-                    }
-                  >
-                    Connected Wallets
-                  </Link>
-                </div>
-                <div className={styles.subNavItem}>
-                  <div className={styles.subNavIconContainer}>
-                    <div
+                  <div className={styles.subNavItem}>
+                    <div className={styles.subNavIconContainer}>
+                      <div
+                        className={
+                          currentRoute === "change-password"
+                            ? styles.subNavItemMenuCircleActive
+                            : styles.subNavItemMenuCircle
+                        }
+                      ></div>
+                    </div>
+                    <Link
+                      href="/admin/user-account/change-password"
                       className={
                         currentRoute === "change-password"
-                          ? styles.subNavItemMenuCircleActive
-                          : styles.subNavItemMenuCircle
+                          ? styles.subNavItemActiveTxt
+                          : styles.subNavItemTxt
                       }
-                    ></div>
+                    >
+                      Change Password
+                    </Link>
                   </div>
-                  <Link
-                    href="/admin/user-account/change-password"
-                    className={
-                      currentRoute === "change-password"
-                        ? styles.subNavItemActiveTxt
-                        : styles.subNavItemTxt
-                    }
-                  >
-                    Change Password
-                  </Link>
                 </div>
-              </div>
-                )
-              }
+              )}
             </div>
             <div className={styles.navItem}>
               {currentRoute === "analytics" && (
@@ -357,8 +357,8 @@ const Sidebar = () => {
                 </Link>
               </div>
               <div className={styles.arrowIcon}>
-                  <Image src={rightArrowIcon} alt="arrow-icon" width={7} />
-                </div>
+                <Image src={rightArrowIcon} alt="arrow-icon" width={7} />
+              </div>
             </div>
           </div>
         </div>

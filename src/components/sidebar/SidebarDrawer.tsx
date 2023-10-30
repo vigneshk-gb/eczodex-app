@@ -24,7 +24,7 @@ const styles = {
   navWrapper: `w-full h-full flex flex-col gap-[1rem] justify-between pb-[1rem] gap-y-[0.5rem]`,
   navItemWrapper: `flex flex-col`,
   navContainer: `w-full h-fit mt-[1rem] flex flex-col gap-y-[1.5rem]`,
-  navItem: `flex items-center justify-between`,
+  navItem: `flex items-center justify-between cursor-pointer`,
   navActiveIndicator: `absolute w-[0.3rem] h-[4rem] rounded-r-[0.75rem] bg-[#fff]`,
   navCtn: `flex ml-[1.75rem] gap-x-[1.38rem]`,
   navIcon: `w-[3rem] h-[3rem] rounded-md bg-white flex justify-center items-center`,
@@ -245,7 +245,7 @@ const SidebarDrawer = () => {
           <div className={styles.adminHeading}>Admin</div>
           <div className={styles.adminContainer}>
             <div className={styles.adminItemWrapper}>
-              <div className={styles.navItem}>
+              <div className={styles.navItem}  onClick={toggleSubNav}>
                 {currentRoute === "connected-wallets" ||
                 currentRoute === "change-password" ? (
                   <div className={styles.navActiveIndicator}></div>
@@ -278,7 +278,7 @@ const SidebarDrawer = () => {
                   className={
                     isSubNavOpen ? styles.arrowIconActive : styles.arrowIcon
                   }
-                  onClick={toggleSubNav}
+       
                 >
                   <Image src={rightArrowIcon} alt="arrow-icon" width={7} />
                 </div>
