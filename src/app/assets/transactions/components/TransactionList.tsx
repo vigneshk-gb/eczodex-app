@@ -16,7 +16,7 @@ const styles = {
   tableHeadDate: `basis-4/12  self-center flex gap-[0.62rem] font-normal text-base leading-[1.4rem] text-[#110E2E] px-[0.87rem]`,
   tableHeadTime: `basis-6/12  self-center flex gap-[0.62rem] font-normal text-base leading-[1.4rem] text-[#110E2E] px-[0.87rem]`,
   tableHeadStatus: `basis-6/12  self-center flex justify-end gap-[0.62rem] font-normal text-base leading-[1.4rem] text-[#110E2E] px-[0.87rem]`,
-  tableBodyWrapper: `w-full h-fit flex flex-col gap-[1.87rem]`,
+  tableBodyWrapper: `w-full h-fit flex flex-col gap-y-[1rem] md:gap-[1.87rem]`,
   tableItemWrapper: `w-full h-fit flex flex-col border-[#E4E3EB] rounded-[0.5rem] border border-solid`,
   tableBodyContainer: `w-full h-fit flex`,
   tableBodySubContainerFirst: `basis-9/12 md:basis-7/12 min-h-[4.5rem]  max-md:flex-col justify-between md:items-center md:justify-between flex`,
