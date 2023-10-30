@@ -76,8 +76,6 @@ const Sidebar = () => {
       setCurrentRoute("change-password");
       setIsSubNavOpen(true);
     }
-
-
   }, [pathname]);
 
   const toggleSubNav = () => {

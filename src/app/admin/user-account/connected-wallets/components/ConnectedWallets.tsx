@@ -288,7 +288,7 @@ const ConnectedWallets = () => {
                     <Image src={checkIcon} alt="checkIcon" width={32} />
                   </div>
                   <div className={styles.cancelIcon}>
-                    <Image src={crossIcon} alt="crossIcon" width={32} />
+                    <Image src={crossIcon} alt="crossIcon" width={40} />
                   </div>
                 </div>
               </div>
