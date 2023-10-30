@@ -53,7 +53,7 @@ const styles = {
   statusTextRisk: `uppercase leading-[0.87rem] tracking-[0.062rem] font-medium text-[0.82rem] text-[#D1CA7B]`,
   statusBar: `flex`,
   dropDownArrow: `flex`,
-  listNavContainer: `w-fit flex items-center gap-[0.69rem] mx-auto mt-[5rem]`,
+  listNavContainer: `w-full md:w-fit flex justify-center items-center gap-[0.69rem] mx-auto mt-[0.5rem] md:mt-[2rem]`,
   navContainer: `flex items-center gap-[0.69rem]`,
   listNavArrow: ``,
   listNavText: `text-base font-medium text-center text-[#110E2E]`,

@@ -58,7 +58,7 @@ const styles = {
   cancelIcon: `flex`,
   nameInput: `w-full px-[1rem] py-[0.88rem] outline-none font-medium text-[0.87rem] md:text-base text-clip rounded-[0.5rem] placeholder:text-base placeholder:text-[#6E7187] placeholder:font-normal`,
   addNewTxt: `text-[0.87rem] md:text-base font-bold leading-[1.2rem] md:leading-[1.4rem] bg-clip-text text-transparent bg-gradient-to-b from-[#449ECF] to-[#68BCC7] to-[#76C9BC] to-[#7BD2AA]`,
-  listNavContainer: `w-fit flex items-center gap-[0.69rem] mx-auto mt-[1rem] md:mt-[3rem]`,
+  listNavContainer: `w-full md:w-fit flex justify-center items-center gap-[0.69rem] mx-auto mt-[0.5rem] md:mt-[2rem]`,
   navContainer: `flex items-center gap-[0.69rem]`,
   listNavArrow: ``,
   listNavText: `text-base font-medium text-center text-[#110E2E]`,
