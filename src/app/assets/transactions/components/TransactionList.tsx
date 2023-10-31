@@ -12,10 +12,11 @@ const styles = {
   container: `w-full h-full flex flex-col overflow-auto`,
   tableContainer: `w-full h-full flex flex-col pb-[2.06rem]`,
   tableHeadContainer: `w-full h-[4.56rem] hidden md:flex items-center justify-evenly text-center`,
-  tableHeadTransaction: `basis-8/12 self-center flex gap-[0.62rem] font-normal text-base leading-[1.4rem] text-[#110E2E] px-[0.87rem]`,
-  tableHeadDate: `basis-4/12  self-center flex gap-[0.62rem] font-normal text-base leading-[1.4rem] text-[#110E2E] px-[0.87rem]`,
-  tableHeadTime: `basis-6/12  self-center flex gap-[0.62rem] font-normal text-base leading-[1.4rem] text-[#110E2E] px-[0.87rem]`,
-  tableHeadStatus: `basis-6/12  self-center flex justify-end gap-[0.62rem] font-normal text-base leading-[1.4rem] text-[#110E2E] px-[0.87rem]`,
+  tableHeadText: `w-max text-base font-normal text-center leading-[1.4rem] text-[#110E2E]`,
+  tableHeadTransaction: `basis-8/12 self-center flex gap-[0.62rem] px-[0.87rem]`,
+  tableHeadDate: `basis-4/12  self-center flex gap-[0.62rem] px-[0.87rem]`,
+  tableHeadTime: `basis-6/12  self-center flex gap-[0.62rem] px-[0.87rem]`,
+  tableHeadStatus: `basis-6/12  self-center flex justify-end gap-[0.62rem] px-[0.87rem]`,
   tableBodyWrapper: `w-full h-fit flex flex-col gap-y-[1rem] md:gap-[1.87rem]`,
   tableItemWrapper: `w-full h-fit flex flex-col border-[#E4E3EB] rounded-[0.5rem] border border-solid`,
   tableBodyContainer: `w-full h-fit flex`,
@@ -27,13 +28,13 @@ const styles = {
   tableBodyTime: `flex basis-6/12 h-full items-center max-md:justify-end justify-start px-[0.87rem]`,
   tableBodyStatus: `flex basis-6/12 h-full max-md:-order-1 justify-end px-[0.87rem] flex items-center`,
   assetLogoCtn: `w-[2.5rem] md:w-[3.8rem]`,
-  assetName: `text-[0.85rem] md:text-base font-normal md:font-medium leading-[1.2rem] md:leading-[1.4rem] text-[#110E2E]`,
-  dateTimeText: `text-[0.75rem] md:text-base font-light md:font-normal leading-[1rem] md:leading-[1.4rem] text-[#110E2E] `,
-  timeText: `text-[1.1rem] leading-[1.75rem] font-extrabold text-[#110E2E]`,
+  assetName: `w-max text-[0.85rem] md:text-base font-normal md:font-medium leading-[1.2rem] md:leading-[1.4rem] text-[#110E2E]`,
+  dateTimeText: `w-max text-[0.75rem] md:text-base font-light md:font-normal leading-[1rem] md:leading-[1.4rem] text-[#110E2E] `,
+  timeText: `w-max text-[1.1rem] leading-[1.75rem] font-extrabold text-[#110E2E]`,
   statusCtn: `w-full flex items-center justify-between`,
-  statusTextCompleted: `text-[0.85rem] md:text-base font-bold text-[#7FD7A4] leading-[1.2rem] md:leading-[1.4rem] text-end`,
-  statusTextPending: `text-[0.85rem] md:text-base font-bold text-[#D1CA7B] leading-[1.2rem] md:leading-[1.4rem] text-end`,
-  statusTextFailed: `text-[0.85rem] md:text-base  font-bold text-[#F17E7E] leading-[1.2rem] md:leading-[1.4rem]text-end`,
+  statusTextCompleted: `w-max text-[0.85rem] md:text-base font-bold text-[#7FD7A4] leading-[1.2rem] md:leading-[1.4rem] text-end`,
+  statusTextPending: `w-max text-[0.85rem] md:text-base font-bold text-[#D1CA7B] leading-[1.2rem] md:leading-[1.4rem] text-end`,
+  statusTextFailed: `w-max text-[0.85rem] md:text-base  font-bold text-[#F17E7E] leading-[1.2rem] md:leading-[1.4rem]text-end`,
   statusBar: `flex`,
   dropDownArrow: `flex`,
   listNavContainer: `w-full md:w-fit flex justify-center items-center gap-[0.69rem] mx-auto mt-[0.5rem] md:mt-[2rem]`,
@@ -50,7 +51,7 @@ const TransactionList = () => {
       <div className={styles.tableHeadContainer}>
         <div className={styles.tableBodySubContainerFirst}>
           <div className={styles.tableHeadTransaction}>
-            <span>Transaction</span>
+            <span className={styles.tableHeadText}>Transaction</span>
             <Image
               src={arrowDownLogo}
               alt="arrowDownLogo"
@@ -59,7 +60,7 @@ const TransactionList = () => {
             />
           </div>
           <div className={styles.tableHeadDate}>
-            <span>Date</span>
+            <span className={styles.tableHeadText}>Date</span>
             <Image
               src={arrowDownLogo}
               alt="arrowDownLogo"
@@ -70,7 +71,7 @@ const TransactionList = () => {
         </div>
         <div className={styles.tableBodySubContainerSecond}>
           <div className={styles.tableHeadTime}>
-            <span>Time</span>
+            <span className={styles.tableHeadText}>Time</span>
             <Image
               src={arrowDownLogo}
               alt="arrowDownLogo"
@@ -79,7 +80,7 @@ const TransactionList = () => {
             />
           </div>
           <div className={styles.tableHeadStatus}>
-            <span>Status</span>
+            <span className={styles.tableHeadText}>Status</span>
             <Image
               src={arrowDownLogo}
               alt="arrowDownLogo"

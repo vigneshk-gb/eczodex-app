@@ -16,7 +16,7 @@ import Header from "../header/Header";
 
 const styles = {
   container: `w-full h-full flex flex-col overflow-auto`,
-  dashboard: `relative w-full max-w-[73rem] min-h-screen bg-white flex flex-col items-center justify-start xl:justify-end gap-[1rem] md:gap-[2rem] mx-auto md:my-[0.5rem] self-center rounded-[1rem] overflow-hidden`,
+  dashboard: `relative w-full max-w-[90%] min-h-screen bg-white flex flex-col items-center justify-start xl:justify-end gap-[1rem] md:gap-[2rem] mx-auto md:my-[0.5rem] self-center rounded-[1rem] overflow-hidden`,
   elipseSm: `absolute  w-[3.25rem] h-[3.25rem] top-[4.25rem] right-[20.13rem] z-0`,
   elipseMd: `absolute w-[6.25rem] h-[6.25rem]  top-[11.25rem] right-[5.31rem] z-0`,
   elipseLg: `absolute w-[18.81rem] h-[18.81rem] top-0 left-0 z-0 hidden md:block`,

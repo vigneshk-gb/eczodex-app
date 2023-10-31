@@ -5,7 +5,7 @@ const styles = {
   subHead: `w-full h-auto mx-[2.81rem] my-[1.5rem] md:my-[2.5rem] flex items-center justify-evenly px-[1rem] md:px-[2.5rem]`,
   hr: `flex-1 h-[1px] border-[#E4E3EB]`,
   subHeadText: `text-[0.87rem] md:text-[1.25rem] font-medium text-[#6E7187] text-center mx-[1rem] md:mx-[2rem]`,
-  assetContainer: `w-full md:w-[40rem] h-auto flex flex-col`,
+  assetContainer: `w-full md:w-[45rem] h-auto flex flex-col`,
   bottomContainer: `w-full flex flex-col`,
   topSubCtn: `flex flex-col gap-y-[0.75rem] md:gap-y-[1rem]`,
   limitInfoBox: `flex gap-[0.25rem]`,
