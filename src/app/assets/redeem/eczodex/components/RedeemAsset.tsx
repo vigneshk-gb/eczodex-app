@@ -15,13 +15,13 @@ import TransactionStatus from "./TransactionStatus";
 
 const styles = {
   container: `w-full h-full flex flex-col overflow-auto`,
-  redeemAsset: `w-full max-w-[73rem] min-h-screen bg-[#ffff] border-[#E4E3EB] border-[1px] border-solid mx-auto md:my-[0.5rem] self-center rounded-[1rem] p-[1rem] md:p-[2.5rem]`,
+  redeemAsset: `w-full max-w-[90%] min-h-screen bg-[#ffff] border-[#E4E3EB] border-[1px] border-solid mx-auto md:my-[0.5rem] self-center rounded-[1rem] p-[1rem] md:p-[2.5rem]`,
   headContainer: `flex`,
   prevNavLogo: `absolute w-[3.81rem] h-[3.81rem] hidden md:block`,
   titleContainer: `mx-auto`,
   subTitle: `text-[#6E7187] font-normal text-[0.75rem] md:text-base leading-normal capitalize text-center`,
   title: `text-[#110E2E] font-medium text-[1.25rem] md:text-[2rem] leading-normal capitalize text-center tracking-[0.05rem]`,
-  mintBox: `w-full max-w-[51.56rem] h-fit md:pb-[2rem] mt-[2rem] mx-auto rounded-[1rem] border-[#E4E3EB] md:border-[1px] border-solid flex flex-col items-center`,
+  mintBox: `w-full max-w-[55rem] h-fit md:pb-[2rem] mt-[2rem] mx-auto rounded-[1rem] border-[#E4E3EB] md:border-[1px] border-solid flex flex-col items-center`,
   menuContainer: `w-full h-fit flex max-md:rounded-[1rem] rounded-t-[1rem] overflow-hidden border-[#E4E3EB] max-md:border`,
   menuItem: `basis-1/4 flex items-center justify-center bg-[#ffff] p-[0.5rem] md:p-[1rem] border-[#E4E3EB] md:border-b border-r border-solid `,
   menuItemTxt: `text-[0.8rem] font-normal tracking-[0.1rem] uppercase text-[#6E7187] hidden md:block`,

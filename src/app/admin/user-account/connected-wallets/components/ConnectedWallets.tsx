@@ -20,10 +20,10 @@ import Header from "@/components/header/Header";
 
 const styles = {
   container: `w-full h-full flex flex-col overflow-auto`,
-  listContainer: `w-full max-w-[73rem] min-h-screen bg-[#ffff] border-[#E4E3EB] border-[1px] border-solid mx-auto md:my-[0.5rem] self-center rounded-[1rem] p-[1rem] md:p-[2.5rem]`,
+  listContainer: `w-full md:w-[98%] min-h-screen bg-[#ffff] border-[#E4E3EB] border-[1px] border-solid mx-auto md:my-[0.5rem] self-center rounded-[1rem] p-[1rem] md:p-[2.5rem]`,
   listHeadContainer: `w-full mb-[2rem] flex items-center justify-between`,
   listTitle: `text-[1.1rem] md:text-[1.25rem] text-[#110E2E] font-medium`,
-  headItemTitle: `text-[0.75rem] md:text-base font-normal text-[#110E2E] leading-[1.4rem]`,
+  tableHeadText: `w-max text-base font-normal text-center leading-[1.4rem] text-[#110E2E]`,
   headItemTitleSecondary: `text-[0.75rem] md:text-base font-normal text-[#6E7187] leading-[1.4rem] max-md:block hidden`,
   tableContainer: `w-full h-full flex flex-col pb-[2.06rem]`,
   tableHeadContainer: `w-full h-[4.56rem] hidden md:flex items-center justify-evenly text-center`,
@@ -85,7 +85,7 @@ const ConnectedWallets = () => {
         <div className={styles.tableContainer}>
           <div className={styles.tableHeadContainer}>
             <div className={styles.tableHeadWalletAddress}>
-              <span className={styles.headItemTitle}>Wallet Address</span>
+              <span className={styles.tableHeadText}>Wallet Address</span>
               <Image
                 src={arrowDownLogo}
                 alt="arrowDownLogo"
@@ -94,7 +94,7 @@ const ConnectedWallets = () => {
               />
             </div>
             <div className={styles.tableHeadChain}>
-              <span className={styles.headItemTitle}>Chain</span>
+              <span className={styles.tableHeadText}>Chain</span>
               <Image
                 src={arrowDownLogo}
                 alt="arrowDownLogo"
@@ -103,7 +103,7 @@ const ConnectedWallets = () => {
               />
             </div>
             <div className={styles.tableHeadWalletName}>
-              <span className={styles.headItemTitle}>Wallet Name</span>
+              <span className={styles.tableHeadText}>Wallet Name</span>
               <Image
                 src={arrowDownLogo}
                 alt="arrowDownLogo"
