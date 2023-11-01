@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { motion, AnimatePresence, animate } from "framer-motion";
+
 import EczodexLogo from "../../../public/main-logo.svg";
 import homeIcon from "../../../public/Icons/home-icon.svg";
 import homeIconWhite from "../../../public/Icons/home-icon-white.svg";
@@ -29,6 +31,7 @@ const styles = {
   navIconSecondary: `w-[3rem] h-[3rem] rounded-md bg-white flex justify-center items-center bg-opacity-10`,
   navText: `text-[#FFFFFF] self-center font-semibold text-base`,
   subNavContainer: `w-full h-fit flex flex-col mt-[1rem] gap-y-[0.5rem] `,
+  subNavContainerSec: `w-full h-fit flex flex-col mt-[1.3rem] gap-y-[0.5rem] `,
   subNavIconContainer: `w-fit pt-[0.5rem] flex flex-col justify-center items-center gap-[0.5rem]`,
   subNavTitle: `text-[#FFFFFF] text-[0.75rem] tracking-[0.11rem] font-normal uppercase ml-[2.25rem]`,
   subNavItem: `w-fit ml-[3rem] flex gap-[2.62rem] items-start `,
@@ -80,6 +83,11 @@ const Sidebar = () => {
 
   const toggleSubNav = () => {
     setIsSubNavOpen(!isSubNavOpen);
+  };
+
+  const fadeInVariants = {
+    hidden: { opacity: 0, height: 0 },
+    visible: { opacity: 1, height: "5.5rem", transition: { duration: 0.2 } },
   };
 
   return (
@@ -282,53 +290,56 @@ const Sidebar = () => {
                   </div>
                 )}
               </div>
-              {isSubNavOpen && (
-                <div className={styles.subNavContainer}>
-                  <div className={styles.subNavItem}>
-                    <div className={styles.subNavIconContainer}>
-                      <div
-                        className={
-                          currentRoute === "connected-wallets"
-                            ? styles.subNavItemMenuCircleActive
-                            : styles.subNavItemMenuCircle
-                        }
-                      ></div>
-                      <div className={styles.subNavVerticalLine}></div>
-                    </div>
-                    <Link
-                      href="/admin/user-account/connected-wallets"
+              <motion.div
+                className={styles.subNavContainerSec}
+                initial="hidden"
+                animate={isSubNavOpen ? "visible" : "hidden"}
+                variants={fadeInVariants}
+              >
+                <div className={styles.subNavItem}>
+                  <div className={styles.subNavIconContainer}>
+                    <div
                       className={
                         currentRoute === "connected-wallets"
-                          ? styles.subNavItemActiveTxt
-                          : styles.subNavItemTxt
+                          ? styles.subNavItemMenuCircleActive
+                          : styles.subNavItemMenuCircle
                       }
-                    >
-                      Connected Wallets
-                    </Link>
+                    ></div>
+                    <div className={styles.subNavVerticalLine}></div>
                   </div>
-                  <div className={styles.subNavItem}>
-                    <div className={styles.subNavIconContainer}>
-                      <div
-                        className={
-                          currentRoute === "change-password"
-                            ? styles.subNavItemMenuCircleActive
-                            : styles.subNavItemMenuCircle
-                        }
-                      ></div>
-                    </div>
-                    <Link
-                      href="/admin/user-account/change-password"
+                  <Link
+                    href="/admin/user-account/connected-wallets"
+                    className={
+                      currentRoute === "connected-wallets"
+                        ? styles.subNavItemActiveTxt
+                        : styles.subNavItemTxt
+                    }
+                  >
+                    Connected Wallets
+                  </Link>
+                </div>
+                <div className={styles.subNavItem}>
+                  <div className={styles.subNavIconContainer}>
+                    <div
                       className={
                         currentRoute === "change-password"
-                          ? styles.subNavItemActiveTxt
-                          : styles.subNavItemTxt
+                          ? styles.subNavItemMenuCircleActive
+                          : styles.subNavItemMenuCircle
                       }
-                    >
-                      Change Password
-                    </Link>
+                    ></div>
                   </div>
+                  <Link
+                    href="/admin/user-account/change-password"
+                    className={
+                      currentRoute === "change-password"
+                        ? styles.subNavItemActiveTxt
+                        : styles.subNavItemTxt
+                    }
+                  >
+                    Change Password
+                  </Link>
                 </div>
-              )}
+              </motion.div>
             </div>
             <div className={styles.navItem}>
               {currentRoute === "analytics" && (
