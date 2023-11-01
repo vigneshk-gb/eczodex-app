@@ -1,3 +1,4 @@
+"use-client"
 import React, { useState, useEffect } from "react";
 
 type WindowDimensions = {
@@ -6,11 +7,16 @@ type WindowDimensions = {
 };
 
 function getWindowDimensions() {
-  const { innerWidth: width, innerHeight: height } = window;
-  return {
-    width,
-    height,
-  };
+  if (typeof window !== "undefined") {
+    const { innerWidth: width, innerHeight: height } = window;
+    return {
+      width,
+      height,
+    };
+  }
+
+  // Default dimensions for server-side rendering
+  return { width: 0, height: 0 };
 }
 
 const useWindowDimensions = () => {
@@ -21,8 +27,10 @@ const useWindowDimensions = () => {
       setWindowDimensions(getWindowDimensions());
     }
 
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }
   }, []);
 
   return windowDimensions;
