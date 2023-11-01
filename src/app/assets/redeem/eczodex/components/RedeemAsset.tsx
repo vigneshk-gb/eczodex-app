@@ -15,7 +15,7 @@ import TransactionStatus from "./TransactionStatus";
 
 const styles = {
   container: `w-full h-full flex flex-col overflow-auto`,
-  redeemAsset: `w-full max-w-[90%] min-h-screen bg-[#ffff] border-[#E4E3EB] border-[1px] border-solid mx-auto md:my-[0.5rem] self-center rounded-[1rem] p-[1rem] md:p-[2.5rem]`,
+  redeemAsset: `w-full md:w-[90%] min-h-screen bg-[#ffff] border-[#E4E3EB] border-[1px] border-solid mx-auto md:my-[0.5rem] self-center rounded-[1rem] p-[1rem] md:p-[2.5rem]`,
   headContainer: `flex`,
   prevNavLogo: `absolute w-[3.81rem] h-[3.81rem] hidden md:block`,
   titleContainer: `mx-auto`,
