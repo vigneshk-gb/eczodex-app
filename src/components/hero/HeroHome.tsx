@@ -21,9 +21,9 @@ const styles = {
   elipseMd: `absolute w-[6.25rem] h-[6.25rem]  top-[11.25rem] right-[5.31rem] z-0`,
   elipseLg: `absolute w-[18.81rem] h-[18.81rem] top-0 left-0 z-0 hidden md:block`,
   titleContainer: `md:min-w-[22.12rem] w-full h-fit mt-[2rem] md:mt-[16rem] flex justify-between px-[1rem] lg:px-[2rem] lg:px-[4rem] z-10`,
-  titleCtn: `w-full fit flex flex-wrap gap-x-4`,
-  primaryText: `text-[2rem] md:text-[2.8rem] font-semibold text-[#6E7187] capitalize leading-[2rem] md:leading-[4rem] `,
-  secondaryText: `text-[2rem] md:text-[2.8rem] font-semibold text-[#110E2E] capitalize leading-[2rem] md:leading-[4rem] `,
+  titleCtn: `md:w-4/6 fit flex flex-wrap gap-x-4`,
+  primaryText: `text-[2rem] md:text-[2.8rem] font-semibold text-[#6E7187] leading-[2rem] md:leading-[4rem] `,
+  secondaryText: `text-[2rem] md:text-[2.8rem] font-semibold text-[#110E2E] leading-[2rem] md:leading-[4rem] `,
   arrowBox: `w-fit h-fit gap-1 self-end hidden md:flex`,
   arrowLeftIcon: `text-[#6E7187]`,
   arrowRightIcon: `text-[#110E2E]`,
@@ -49,12 +49,13 @@ const HeroHome = () => {
       <Image className={styles.elipseLg} src={elipseLarge} alt="elipse" />
       <div className={styles.titleContainer}>
         <div className={styles.titleCtn}>
-          <span className={styles.primaryText}>Phasellus</span>
-          <span className={styles.secondaryText}>Stablecoins</span>
-          <span className={styles.primaryText}>Bibendum</span>
-          <span className={styles.secondaryText}>Mint</span>
-          <span className={styles.primaryText}>Vulputate Pretium</span>
-          <span className={styles.secondaryText}>Redeeem</span>
+          <span className={styles.primaryText}>The</span>
+          <span className={styles.secondaryText}>Gateway</span>
+          <span className={styles.primaryText}>to</span>
+          <span className={styles.secondaryText}>the</span>
+          <span className={styles.primaryText}>New</span>
+          <span className={styles.secondaryText}>Financial</span>
+          <span className={styles.primaryText}>Economy</span>
         </div>
         <div className={styles.arrowBox}>
           <AiOutlineLeft size={28} className={styles.arrowLeftIcon} />
