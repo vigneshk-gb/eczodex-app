@@ -41,5 +41,7 @@
   
 body{
 background-color: #F2F8FC;
-font-family: "Plus Jakarta Sans", sans-serif normal 
+font-family: "Plus Jakarta Sans", sans-serif normal;
+/* height: 100vh;
+overflow-y: hidden; */
 }

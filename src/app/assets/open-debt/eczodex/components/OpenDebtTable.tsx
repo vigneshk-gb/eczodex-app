@@ -31,7 +31,7 @@ const styles = {
   tableHeadAmountBorrowed: `basis-1/2 self-center flex items-center  gap-[0.2rem] px-[0.87rem]`,
   tableHeadLiquidationPrice: ` basis-1/2  self-center flex items-center  gap-[0.2rem] px-[0.87rem]`,
   tableHeadStatus: `basis-full  self-center flex items-center  gap-[0.2rem] px-[0.87rem]`,
-  tableBodyWrapper: `w-full h-auto flex flex-col gap-[1.87rem]`,
+  tableBodyWrapper: `w-full h-auto flex flex-col gap-[0.5rem] md:gap-[1rem]`,
   tableItemWrapper: `w-full h-auto flex flex-col border-[#E4E3EB] rounded-[0.5rem] border border-solid min-w-[18rem] md:min-w-[56rem]`,
   tableItemWrapperToggled: ` w-full h-auto flex flex-col border-[#E4E3EB] rounded-[0.5rem] border border-solid bg-[#2B8AC8] bg-opacity-[0.05]`,
   tableBodyContainer: `w-full h-fit min-h-[4.56rem] max-md:flex-col flex items-center `,

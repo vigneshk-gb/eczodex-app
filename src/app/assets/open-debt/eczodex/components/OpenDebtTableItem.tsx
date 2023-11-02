@@ -82,7 +82,7 @@ const OpenDebtTableItem = () => {
   };
 
   return (
-    <div className={styles.tableItemWrapper}>
+    <div className={isOpen ? styles.tableItemWrapperToggled : styles.tableItemWrapper}>
       <div className={styles.tableBodyContainer} onClick={toggleOpen}>
         <div className={styles.tableSubContainerFirst}>
           <div className={styles.tableBodySymbol}>
@@ -151,6 +151,7 @@ const OpenDebtTableItem = () => {
             </div>
         </div>
       </div>
+
       <motion.div
         className={styles.toggledContainer}
         initial="hidden"
@@ -192,6 +193,7 @@ const OpenDebtTableItem = () => {
 
         </div>
       </motion.div>
+
     </div>
   );
 };

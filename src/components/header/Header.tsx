@@ -28,7 +28,7 @@ const styles = {
   hamburger: `flex`,
   navIcon: `w-[3rem] h-[3rem] rounded-md flex justify-center items-center`,
   navIconActive: `w-[3rem] h-[3rem] rounded-md bg-white flex justify-center items-center bg-opacity-20`,
-  sidebarDrawer: `w-fit h-screen absolute top-0 left-0 z-20 max-md:w-full w-fit overflow-auto`,
+  sidebarDrawer: `w-fit h-screen fixed z-20 max-md:w-full w-fit overflow-auto`,
 };
 
 const Header = () => {
