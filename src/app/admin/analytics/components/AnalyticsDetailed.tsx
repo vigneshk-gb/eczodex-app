@@ -11,7 +11,7 @@ import Header from "@/components/header/Header";
 const styles = {
   container: `w-full h-full flex flex-col overflow-auto`,
   analytics: `w-full md:w-[98%] min-h-screen h-fit  self-center mx-auto overflow-hidden flex flex-col gap-y-[1rem] justify-between p-[1rem]`,
-  dashboardContainer: `w-full h-fit md:min-h-[25rem] bg-[#ffff] border-[#E4E3EB] rounded-[1rem] md:border-[1px] self-center mx-auto border-solid max-md:flex-col flex items-center md:items-start justify-start gap-x-[1.5rem] px-[1.5rem] pb-[1rem]`,
+  dashboardContainer: `w-full h-fit md:min-h-[25rem] bg-[#ffff] border-[#E4E3EB] rounded-[1rem] md:border-[1px] self-center mx-auto border-solid max-md:flex-col flex items-center md:items-start justify-start gap-x-[1.5rem] md:px-[1.5rem] md:pb-[1rem]`,
   dashLeftCtn: `w-[13rem] md:w-[21rem] h-[13rem] md:h-[21rem] flex flex-col gap-[1rem] items-center justify-center bg-[url('../../public/Images/Analytics-piechart.svg')] bg-cover bg-center`,
   pieChartTitle: `text-center font-semibold leading-[0.75rem] md:leading-[1.25rem] text-[0.75rem] md:text-[1.25] text-[#6E7187]`,
   pieChartSubTitle: `font-bold leading-[2rem] md:leading-[3.37rem] text-[2rem] md:text-[3.37rem] text-[#110E2E]`,

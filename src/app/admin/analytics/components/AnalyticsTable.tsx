@@ -13,7 +13,7 @@ import listNavArrowLeft from "../../../../../public/Icons/nav-left.svg";
 import AnalyticsTableItem from "./AnalyticsTableItem";
 
 const styles = {
-  listContainer: `w-full min-h-[40rem] h-fit bg-[#ffff] border-[#E4E3EB] rounded-[1rem] md:border-[1px] border-solid p-[1rem]`,
+  listContainer: `w-full min-h-[40rem] h-fit bg-[#ffff] border-[#E4E3EB] rounded-[1rem] md:border-[1px] border-solid md:p-[1rem]`,
   listHeadContainer: `w-full mb-[1rem] max-md:flex-col flex items-start md:items-center md:justify-between`,
   listTitle: `text-[1.1rem] md:text-[1.25rem] text-[#110E2E] font-medium`,
   listMenu: `flex items-center gap-[0.5rem]`,
