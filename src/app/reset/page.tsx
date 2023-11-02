@@ -16,9 +16,9 @@ const styles = {
 const ResetPage  = () => {
   return (
     <div className={styles.assetWrapper}>
-      <ResetForm/>
+      {/* <ResetForm/> */}
       {/* <AuthenticatorForm/> */}
-      {/* <VerifyForm/> */}
+      <VerifyForm/>
       {/* <ConfirmReset/> */}
       {/* <SetNewPassword/> */}
       <HeroLoginSignup/>
