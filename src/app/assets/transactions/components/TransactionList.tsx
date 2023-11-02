@@ -9,16 +9,16 @@ import listNavArrowRight from "../../../../../public/Icons/nav-right.svg";
 import listNavArrowLeft from "../../../../../public/Icons/nav-left.svg";
 
 const styles = {
-  container: `w-full h-full flex flex-col overflow-auto`,
-  tableContainer: `w-full h-full flex flex-col pb-[2.06rem]`,
-  tableHeadContainer: `w-full h-[4.56rem] hidden md:flex items-center justify-evenly text-center`,
+  container: `w-full h-full flex flex-col`, 
+  tableContainer: `w-full h-full flex flex-col pb-[2.06rem] overflow-x-scroll`,
+  tableHeadContainer: `w-full h-[4.56rem] md:min-w-[50rem] hidden md:flex items-center justify-evenly text-center`,
   tableHeadText: `w-max text-base font-normal text-center leading-[1.4rem] text-[#110E2E]`,
   tableHeadTransaction: `basis-8/12 self-center flex gap-[0.62rem] px-[0.87rem]`,
   tableHeadDate: `basis-4/12  self-center flex gap-[0.62rem] px-[0.87rem]`,
   tableHeadTime: `basis-6/12  self-center flex gap-[0.62rem] px-[0.87rem]`,
   tableHeadStatus: `basis-6/12  self-center flex justify-end gap-[0.62rem] px-[0.87rem]`,
-  tableBodyWrapper: `w-full h-fit flex flex-col gap-y-[1rem] md:gap-[1.87rem]`,
-  tableItemWrapper: `w-full h-fit flex flex-col border-[#E4E3EB] rounded-[0.5rem] border border-solid`,
+  tableBodyWrapper: `w-full h-fit flex flex-col gap-[0.5rem] md:gap-[1rem]`,
+  tableItemWrapper: `w-full h-fit flex flex-col border-[#E4E3EB] rounded-[0.5rem] border border-solid min-w-[18rem] md:min-w-[50rem]`,
   tableBodyContainer: `w-full h-fit flex`,
   tableBodySubContainerFirst: `basis-9/12 md:basis-7/12 min-h-[4.5rem]  max-md:flex-col justify-between md:items-center md:justify-between flex`,
   tableBodySubContainerSecond: ` basis-3/12 md:basis-5/12 min-h-[4.5rem] max-md:flex-col justify-between md:items-center md:justify-between flex`,

@@ -23,8 +23,8 @@ import OpenDebtTableItem from "./OpenDebtTableItem";
 
 const styles = {
   listContainer: `w-full min-w-[19rem] min-h-[40rem] h-fit bg-[#ffff] border-[#E4E3EB] rounded-[1rem] md:border-[1px] border-solid `,
-  tableContainer: `w-full h-full flex flex-col md:px-[0.87rem] pb-[2.06rem]`,
-  tableHeadContainer: `w-full h-[4.56rem] items-center hidden md:flex`,
+  tableContainer: `w-full h-full flex flex-col md:px-[0.87rem] pb-[2.06rem] overflow-x-scroll`,
+  tableHeadContainer: `w-full h-[4.56rem] items-center hidden md:flex min-w-[56rem]`,
   tableHeadText: `w-max text-base font-normal text-center leading-[1.4rem] text-[#110E2E]`,
   tableHeadSymbol: ` basis-3/5 self-center flex items-center  gap-[0.2rem] px-[0.87rem]`,
   tableHeadQuantity: ` basis-2/5 self-center flex items-center  gap-[0.2rem] px-[0.87rem]`,
@@ -32,7 +32,7 @@ const styles = {
   tableHeadLiquidationPrice: ` basis-1/2  self-center flex items-center  gap-[0.2rem] px-[0.87rem]`,
   tableHeadStatus: `basis-full  self-center flex items-center  gap-[0.2rem] px-[0.87rem]`,
   tableBodyWrapper: `w-full h-auto flex flex-col gap-[1.87rem]`,
-  tableItemWrapper: `w-full h-auto flex flex-col border-[#E4E3EB] rounded-[0.5rem] border border-solid`,
+  tableItemWrapper: `w-full h-auto flex flex-col border-[#E4E3EB] rounded-[0.5rem] border border-solid min-w-[18rem] md:min-w-[56rem]`,
   tableItemWrapperToggled: ` w-full h-auto flex flex-col border-[#E4E3EB] rounded-[0.5rem] border border-solid bg-[#2B8AC8] bg-opacity-[0.05]`,
   tableBodyContainer: `w-full h-fit min-h-[4.56rem] max-md:flex-col flex items-center `,
   tableSubContainerFirst: `w-full h-fit md:basis-5/12 p-[0.5rem] flex items-center justify-between`,
