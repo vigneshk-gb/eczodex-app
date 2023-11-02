@@ -7,13 +7,13 @@ import Header from "@/components/header/Header";
 
 const styles = {
   container: `w-full h-full flex flex-col overflow-auto`,
-  openDebt: `w-full md:w-[98%] min-h-screen h-fit  self-center mx-auto overflow-hidden flex flex-col gap-y-[1rem] justify-between p-[1rem] overflow-scroll`,
-  dashContainer: `relative w-full h-fit min-w-[19rem] min-h-[14rem] p-[1.5rem] bg-[url('../../public/Images/RectangleSmall4.png')] bg-cover bg-left-top rounded-[1rem] `,
+  openDebt: `w-full md:w-[98%] min-h-screen h-fit  self-center mx-auto flex flex-col gap-y-[1rem] justify-between p-[1rem] overflow-x-scroll`,
+  dashContainer: `relative w-full h-fit min-w-[19rem] min-h-[14rem] p-[1.5rem] bg-[url('../../public/Images/RectangleSmall4.png')] bg-cover bg-left-top rounded-[1rem] overflow-x-scroll no-scrollbar`,
   topCtn: `flex flex-col text-[#ffff]`,
   title: `text-[1.1rem] md:text-[1.5rem] leading-[1.1rem] md:leading-[1.5rem]font-semibold mb-[1rem]`,
   dateCtn: `flex gap-[0.62rem]`,
   dateTxt: `text-[0.62rem] md:text-[0.75rem] font-normal leading-[0.75rem] capitalize`,
-  dashCtnWrapper: `w-fit h-fit min-h-[8.3rem] flex flex-wrap mt-[2rem] md:mt-[0.5rem] max-md:flex-col gap-y-[1rem] md:gap-x-[2.5rem] lg:gap-x-[2.5rem] `,
+  dashCtnWrapper: `w-fit h-fit min-h-[8.3rem] flex mt-[2rem] md:mt-[0.5rem] max-md:flex-col gap-y-[1rem] md:gap-x-[2.5rem] lg:gap-x-[2.5rem] max-md:min-w-[61rem]`,
   dashChart: `max-md:absolute max-md:bottom-2 max-md:right-3 min-w-[8.3rem] min-h-[8.3rem] self-start flex flex-col items-center justify-center bg-[url('../../public/Icons/dashChart.svg')] bg-cover bg-center`,
   dashChartCtn: `text-center`,
   dashChartTxt: `text-[0.62rem] font-normal leading-[0.62rem]`,

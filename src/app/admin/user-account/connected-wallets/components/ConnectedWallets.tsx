@@ -25,7 +25,7 @@ const styles = {
   listTitle: `text-[1.1rem] md:text-[1.25rem] text-[#110E2E] font-medium`,
   tableHeadText: `w-max text-base font-normal text-center leading-[1.4rem] text-[#110E2E]`,
   headItemTitleSecondary: `text-[0.75rem] md:text-base font-normal text-[#6E7187] leading-[1.4rem] max-md:block hidden`,
-  tableContainer: `w-full h-full flex flex-col pb-[2.06rem] overflow-x-scroll`,
+  tableContainer: `w-full h-full flex flex-col pb-[2.06rem] overflow-x-scroll no-scrollbar`,
   tableHeadContainer: `w-full h-[4.56rem] md:min-w-[50rem] hidden md:flex items-center justify-evenly text-center`,
   tableHeadItem: `basis-2/6 flex gap-[0.62rem] px-[0.87rem]`,
   tableHeadWalletAddress: `basis-4/6 flex gap-[0.62rem] font-normal text-base leading-[1.4rem] text-[#110E2E] px-[0.87rem]`,

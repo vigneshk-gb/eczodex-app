@@ -23,7 +23,7 @@ import OpenDebtTableItem from "./OpenDebtTableItem";
 
 const styles = {
   listContainer: `w-full min-w-[19rem] min-h-[40rem] h-fit bg-[#ffff] border-[#E4E3EB] rounded-[1rem] md:border-[1px] border-solid `,
-  tableContainer: `w-full h-full flex flex-col md:px-[0.87rem] pb-[2.06rem] overflow-x-scroll`,
+  tableContainer: `w-full h-full flex flex-col md:px-[0.87rem] pb-[2.06rem] overflow-x-scroll no-scrollbar`,
   tableHeadContainer: `w-full h-[4.56rem] items-center hidden md:flex min-w-[56rem]`,
   tableHeadText: `w-max text-base font-normal text-center leading-[1.4rem] text-[#110E2E]`,
   tableHeadSymbol: ` basis-3/5 self-center flex items-center  gap-[0.2rem] px-[0.87rem]`,

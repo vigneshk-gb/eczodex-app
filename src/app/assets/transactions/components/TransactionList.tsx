@@ -10,7 +10,7 @@ import listNavArrowLeft from "../../../../../public/Icons/nav-left.svg";
 
 const styles = {
   container: `w-full h-full flex flex-col`, 
-  tableContainer: `w-full h-full flex flex-col pb-[2.06rem] overflow-x-scroll`,
+  tableContainer: `w-full h-full flex flex-col pb-[2.06rem] overflow-x-scroll no-scrollbar`,
   tableHeadContainer: `w-full h-[4.56rem] md:min-w-[50rem] hidden md:flex items-center justify-evenly text-center`,
   tableHeadText: `w-max text-base font-normal text-center leading-[1.4rem] text-[#110E2E]`,
   tableHeadTransaction: `basis-8/12 self-center flex gap-[0.62rem] px-[0.87rem]`,
