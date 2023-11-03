@@ -90,6 +90,19 @@ const SidebarDrawer = () => {
     visible: { opacity: 1, height: "5.5rem", transition: { duration: 0.2 } },
   };
 
+  useEffect(() => {
+    // Add the custom styles to the body tag when the component mounts
+    document.body.style.height = '100vh';
+    document.body.style.overflowY = 'hidden';
+
+    // Clean up the custom styles when the component unmounts
+    return () => {
+      document.body.style.height = 'auto';
+      document.body.style.overflowY = 'auto';
+    };
+  }, []); 
+  
+
   return (
     <div className={styles.sidebar}>
       <div className={styles.header}></div>

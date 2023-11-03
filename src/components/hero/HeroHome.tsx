@@ -27,7 +27,7 @@ const styles = {
   arrowBox: `w-fit h-fit gap-1 self-end hidden md:flex`,
   arrowLeftIcon: `text-[#6E7187]`,
   arrowRightIcon: `text-[#110E2E]`,
-  assetsContainer: `w-full h-fit flex flex-wrap justify-center xl:justify-evenly px-[1rem] lg:px-[2rem] py-[1rem] gap-[1rem] z-10`,
+  assetsContainer: `w-full h-fit flex flex-wrap justify-center md:justify-start px-[1rem] lg:px-[2rem] py-[1rem] gap-[1rem] z-10`,
   assetCard1: `w-full max-w-[22.12rem] h-[13rem] xl:h-[26rem] flex flex-col items-start justify-between bg-[#2E3578] py-[2rem] px-[1.5rem] rounded-[0.87rem] bg-[url('../../public/Images/Vector-Overlay.svg')] bg-cover xl:bg-contain bg-center bg-no-repeat`,
   assetCard2: `w-full max-w-[22.12rem] h-[13rem] xl:h-[26rem] flex flex-col items-start justify-between bg-[#1D61AC] py-[2rem] px-[1.5rem] rounded-[0.87rem] bg-[url('../../public/Images/Union-Overlay.svg')] bg-cover xl:bg-contain bg-center bg-no-repeat`,
   dummyCard: ` w-full max-w-[22.12rem] h-[13rem] xl:h-[26rem] flex items-center justify-center bg-[#B0D8F7] bg-opacity-20 rounded-[0.87rem]`,
