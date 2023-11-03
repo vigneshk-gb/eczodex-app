@@ -23,7 +23,7 @@ import useWindowDimensions from "@/app/hooks/useWindowDimensions ";
 const styles = {
   tableItemWrapper: `w-full h-auto flex flex-col border-[#E4E3EB] rounded-[0.5rem] border border-solid min-w-[18rem] md:min-w-[56rem]`,
   tableItemWrapperToggled: ` w-full h-auto flex flex-col border-[#E4E3EB] rounded-[0.5rem] border border-solid bg-[#2B8AC8] bg-opacity-[0.05]`,
-  tableBodyContainer: `w-full h-full min-h-[4.56rem] max-md:flex-col flex items-center cursor-pointer`,
+  tableBodyContainer: `w-full h-full min-h-[4.56rem] max-md:flex-col flex items-center cursor-pointer z-10`,
   tableSubContainerFirst: `w-full h-fit md:basis-5/12 p-[0.5rem] flex items-center justify-between`,
   tableSubContainerSecond: `w-full h-fit md:basis-4/12 p-[0.5rem] flex items-center justify-between`,
   tableSubContainerThird: `w-full h-fit md:basis-3/12 p-[0.5rem] flex items-center justify-between`,
