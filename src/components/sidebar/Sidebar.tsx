@@ -46,7 +46,11 @@ const styles = {
   arrowIcon: `mr-[2.43rem] cursor-pointer`,
   arrowIconActive: `mr-[2.43rem] -rotate-90 cursor-pointer`,
   walletContainer: `w-full min- h-[5rem] mt-auto bg-[#2B8AC8] rounded-r-[1rem] flex items-center`,
+  walletLeftCtn: `flex gap-[0.94rem] items-center`,
   walletIcon: `w-[3.68rem] h-[3.68rem] ml-[1.31rem]`,
+  walletInfoCtn: `flex flex-col gap-y-[0.37rem]`,
+  walletText: `text-[0.75rem] font-extrabold text-[#fff]`,
+  walletAddress: `text-[0.75rem] font-medium text-[#fff]`,
   signOutContainer: `flex gap-[0.75rem] ml-auto mr-[1.81rem] items-center`,
   signOutText: `text-sm font-semibold text-[#ffff]`,
   signOutIcon: `w-[1.5rem] h-[1.5rem]`,
@@ -375,8 +379,18 @@ const Sidebar = () => {
         </div>
       </div>
       <div className={styles.walletContainer}>
+        <div className={styles.walletLeftCtn}>
         <div className={styles.walletIcon}>
           <Image src={ethIcon} alt="eth-icon" />
+        </div>
+        <div className={styles.walletInfoCtn}>
+            <div className={styles.walletAddress}>
+            0x94930225134311
+            </div>
+            <div className={styles.walletText}>
+            Wallet code
+            </div>
+          </div>
         </div>
         <div className={styles.signOutContainer}>
           <Link href="/login" className={styles.signOutText}>

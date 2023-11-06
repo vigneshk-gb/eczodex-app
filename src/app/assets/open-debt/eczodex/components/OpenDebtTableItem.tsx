@@ -71,15 +71,17 @@ const OpenDebtTableItem = () => {
   function toggleOpen() {
     setIsOpen(!isOpen);
   }
+  
   const fadeInVariants = {
     hidden: { opacity: 0, height: 0 },
-    visible: { opacity: 1, height: "11.12rem", transition: { duration: 0.2 } },
+    visible: { opacity: 1, height: "5.56rem", transition: { duration: 0.2 } },
   };
 
   const fadeInVariantsSecondary = {
     hidden: { opacity: 0, height: 0 },
-    visible: { opacity: 1, height: "5.56rem", transition: { duration: 0.2 } },
+    visible: { opacity: 1, height: "11.12rem", transition: { duration: 0.2 } },
   };
+
 
   return (
     <div className={isOpen ? styles.tableItemWrapperToggled : styles.tableItemWrapper}>
@@ -157,7 +159,7 @@ const OpenDebtTableItem = () => {
         initial="hidden"
         animate={isOpen ? "visible" : "hidden"}
         variants={
-          breakPointWidth < 768 ? fadeInVariants : fadeInVariantsSecondary
+          breakPointWidth < 768 ? fadeInVariantsSecondary : fadeInVariants
         }
       >
         <div className={styles.tableSubContainerFirst}>
