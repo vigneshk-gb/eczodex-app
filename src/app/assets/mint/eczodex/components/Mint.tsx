@@ -12,6 +12,7 @@ import BeneficiaryAccount from "./BeneficiaryAccount";
 import ConfirmTransfer from "./ConfirmTransfer";
 import TransactionStatus from "./TransactionStatus";
 import Header from "@/components/header/Header";
+import Message from "@/components/Message";
 
 const styles = {
   container: `w-full h-full flex flex-col overflow-auto`,
@@ -152,7 +153,8 @@ const Mint = () => {
           {activeTab === "three" && <DepositCash />}
           {activeTab === "four" && <BeneficiaryAccount />}
           {activeTab === "five" && <ConfirmTransfer />}
-          {activeTab === "six" && <TransactionStatus />}
+          {/* {activeTab === "six" && <TransactionStatus />} */}
+          {activeTab === "six" && <Message/>}
         </div>
         {activeTab === "one" && (
           <div

@@ -33,7 +33,7 @@ export default function Home() {
       // console.log(result)
       // setBearerToken(result?.token)
     };
-    getBearerToken();
+    // getBearerToken();
   }, []);
 
   useEffect(() => {

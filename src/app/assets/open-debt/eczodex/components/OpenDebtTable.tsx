@@ -18,7 +18,6 @@ import dropDownArrowDown from "../../../../../../public/Icons/dropDownArrowDown.
 import listNavArrowRight from "../../../../../../public/Icons/nav-right.svg";
 import listNavArrowLeft from "../../../../../../public/Icons/nav-left.svg";
 
-import useWindowDimensions from "@/app/hooks/useWindowDimensions ";
 import OpenDebtTableItem from "./OpenDebtTableItem";
 
 const styles = {
@@ -79,22 +78,7 @@ const styles = {
 
 const OpenDebtTable = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const {width: breakPointWidth } = useWindowDimensions();
 
-
-  function toggleOpen() {
-    setIsOpen(!isOpen);
-  }
-
-  const fadeInVariants = {
-    hidden: { opacity: 0, height: 0},
-    visible: { opacity: 1, height: "11.12rem", transition: { duration: 0.2 } },
-  };
-
-  const fadeInVariantsSecondary = {
-    hidden: { opacity: 0, height: 0},
-    visible: { opacity: 1, height: "5.56rem", transition: { duration: 0.2 } },
-  };
 
   return (
     <div className={styles.listContainer}>

@@ -30,7 +30,7 @@ const styles = {
   assetsContainer: `w-full h-fit flex flex-wrap justify-center xl:justify-start px-[1rem] lg:px-[2rem] py-[1rem] gap-[1rem] z-10`,
   assetCard1: `w-full max-w-[22rem] h-[13rem] xl:max-w-[24rem] xl:h-[26rem] flex flex-col items-start justify-between bg-[#2E3578] py-[2rem] px-[1.5rem] lg:px-[2rem] rounded-[0.87rem] bg-[url('../../public/Images/Vector-Overlay.svg')] bg-cover bg-center`,
   assetCard2: `w-full max-w-[22rem] h-[13rem] xl:max-w-[24rem] xl:h-[26rem] flex flex-col items-start justify-between bg-[#1D61AC] py-[2rem] px-[1.5rem] lg:px-[2rem] rounded-[0.87rem] bg-[url('../../public/Images/Union-Overlay.svg')] bg-cover bg-center`,
-  dummyCard: ` flex-1 w-full min-w-[10rem] max-w-[22rem] h-[13rem] xl:max-w-[24rem] xl:h-[26rem] flex items-center justify-center bg-[#B0D8F7] bg-opacity-20 rounded-[0.87rem]`,
+  dummyCard: ` md:flex-1 w-full min-w-[10rem] max-w-[22rem] h-[13rem] xl:max-w-[24rem] xl:h-[26rem] flex items-center justify-center bg-[#B0D8F7] bg-opacity-20 rounded-[0.87rem]`,
   assetLogo: `w-[3.25rem] h-[3.25rem] xl:w-[5.25rem] xl:h-[5.25rem]`,
   assetCtn: `flex flex-col items-start text-white gap-2 lg:gap-3`,
   assetTitle: `font-semibold text-[1.5rem] xl:text-[1.8rem] leading-normal`,
